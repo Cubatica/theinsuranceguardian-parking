@@ -1,0 +1,806 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Config Generator - SparkPage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            border: 3px solid #34495e;
+        }
+        
+        .header-label {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .header h1 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 1;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .form-container {
+            background: white;
+            border: 2px solid #d1d5db;
+            padding: 50px;
+        }
+        
+        .form-section {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        .form-section:last-child {
+            border-bottom: none;
+        }
+        
+        .section-title {
+            font-family: 'Roboto Mono', monospace;
+            color: #2c3e50;
+            font-size: 1.5em;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 700;
+            border-left: 6px solid #ff6b6b;
+            padding-left: 15px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        label {
+            display: block;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+        
+        .label-help {
+            font-weight: normal;
+            font-size: 0.9em;
+            color: #666;
+            font-style: italic;
+        }
+        
+        input[type="text"],
+        input[type="url"],
+        textarea,
+        select {
+            width: 100%;
+            padding: 12px;
+            border: 2px solid #d1d5db;
+            border-radius: 0;
+            font-size: 1em;
+            font-family: inherit;
+            transition: all 0.2s;
+        }
+        
+        input:focus,
+        textarea:focus,
+        select:focus {
+            outline: none;
+            border-color: #ff6b6b;
+            box-shadow: 2px 2px 0px #9ca3af;
+        }
+        
+        textarea {
+            resize: vertical;
+            min-height: 100px;
+            font-family: inherit;
+        }
+        
+        .ad-unit {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 0;
+            margin-bottom: 15px;
+            border: 2px solid #d1d5db;
+            border-left: 4px solid #ff6b6b;
+        }
+        
+        .ad-unit-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+        }
+        
+        .ad-unit-title {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .btn {
+            font-family: 'Roboto Mono', monospace;
+            padding: 12px 24px;
+            border: 2px solid #d1d5db;
+            border-radius: 0;
+            font-size: 1em;
+            cursor: pointer;
+            transition: all 0.2s;
+            font-weight: 700;
+        }
+        
+        .btn-primary {
+            background: #2c3e50;
+            color: white;
+            border-color: #2c3e50;
+        }
+        
+        .btn-primary:hover {
+            background: #34495e;
+            transform: translateY(-2px);
+            box-shadow: 3px 3px 0px #9ca3af;
+        }
+        
+        .btn-secondary {
+            background: #f8f9fa;
+            color: #2c3e50;
+        }
+        
+        .btn-secondary:hover {
+            background: #2c3e50;
+            color: white;
+            border-color: #2c3e50;
+        }
+        
+        .btn-success {
+            background: #4caf50;
+            color: white;
+            border-color: #4caf50;
+        }
+        
+        .btn-success:hover {
+            background: #45a049;
+            transform: translateY(-2px);
+            box-shadow: 3px 3px 0px #9ca3af;
+        }
+        
+        .btn-danger {
+            background: #ff6b6b;
+            color: white;
+            padding: 8px 15px;
+            font-size: 0.9em;
+            border-color: #ff6b6b;
+        }
+        
+        .btn-danger:hover {
+            background: #ff5252;
+            border-color: #ff5252;
+        }
+        
+        .btn-add {
+            background: #2c3e50;
+            color: white;
+            width: 100%;
+            margin-top: 10px;
+            border-color: #2c3e50;
+        }
+        
+        .btn-add:hover {
+            background: #34495e;
+        }
+        
+        .actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            margin-top: 40px;
+            padding-top: 30px;
+            border-top: 2px solid #f0f0f0;
+        }
+        
+        .output-section {
+            background: #2c3e50;
+            color: #fff;
+            padding: 30px;
+            border: 2px solid #34495e;
+            margin-top: 30px;
+        }
+        
+        .output-section h3 {
+            font-family: 'Roboto Mono', monospace;
+            color: #fff;
+            margin-bottom: 20px;
+            font-weight: 700;
+            font-size: 1.3em;
+        }
+        
+        .output-content {
+            background: #1e293b;
+            padding: 25px;
+            border: 2px solid #475569;
+            max-height: 400px;
+            overflow-y: auto;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.85em;
+            white-space: pre-wrap;
+            word-wrap: break-word;
+        }
+        
+        .copy-btn {
+            margin-top: 15px;
+            width: 100%;
+        }
+        
+        .success-message {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 6px;
+            margin-top: 15px;
+            display: none;
+        }
+        
+        .theme-preview {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+            gap: 10px;
+            margin-top: 15px;
+        }
+        
+        .theme-option {
+            padding: 15px;
+            border-radius: 8px;
+            text-align: center;
+            cursor: pointer;
+            border: 3px solid transparent;
+            transition: all 0.3s;
+        }
+        
+        .theme-option:hover {
+            transform: scale(1.02);
+            border-color: #ff6b6b;
+            border-width: 3px;
+        }
+        
+        .theme-option.selected {
+            border-color: #2c3e50;
+            border-width: 4px;
+            box-shadow: 3px 3px 0px #9ca3af;
+        }
+        
+        .theme-default { background: #001b44; color: white; }
+        .theme-purple { background: #1a0033; color: white; }
+        .theme-green { background: #002b1d; color: white; }
+        .theme-orange { background: #1a0f00; color: white; }
+        .theme-pink { background: #1f0318; color: white; }
+        .theme-red { background: #1a0505; color: white; }
+        .theme-white { background: #ffffff; color: #333; border: 2px solid #ddd; }
+        .theme-light { background: #f9fafb; color: #333; border: 2px solid #ddd; }
+        
+        .help-text {
+            font-size: 0.9em;
+            color: #666;
+            margin-top: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-label">Tools</div>
+            <h1>Config Generator</h1>
+            <p>Create your landing page configuration without touching code</p>
+        </div>
+
+        <div class="form-container">
+            <form id="configForm">
+                <!-- TEMPLATE SELECTOR -->
+                <div class="form-section">
+                    <h2 class="section-title">🎨 Quick Start</h2>
+                    
+                    <div class="form-group">
+                        <label>Load Content Template <span class="label-help">(optional - start with pre-built content)</span></label>
+                        <select id="templateSelector" onchange="loadTemplate()">
+                            <option value="">-- Start from Scratch --</option>
+                            <optgroup label="GLP-1 Templates">
+                                <option value="glp1-weight-loss">GLP-1 Weight Loss</option>
+                                <option value="glp1-diabetes">GLP-1 Diabetes Management</option>
+                                <option value="glp1-general">GLP-1 General Information</option>
+                            </optgroup>
+                            <optgroup label="Diabetes Templates">
+                                <option value="diabetes-type2">Diabetes Type 2</option>
+                                <option value="diabetes-management">Diabetes Management</option>
+                                <option value="diabetes-prevention">Diabetes Prevention</option>
+                            </optgroup>
+                            <optgroup label="Hair Loss Templates">
+                                <option value="hair-loss-men">Hair Loss for Men</option>
+                                <option value="hair-loss-women">Hair Loss for Women</option>
+                                <option value="hair-loss-treatment">Hair Loss Treatment Options</option>
+                            </optgroup>
+                            <optgroup label="Erectile Dysfunction Templates">
+                                <option value="ed-treatment">ED Treatment</option>
+                                <option value="ed-causes">ED Causes</option>
+                                <option value="ed-prevention">ED Prevention</option>
+                            </optgroup>
+                            <optgroup label="Commercial Insurance Templates">
+                                <option value="comm_ins-truck">Commercial Truck Insurance</option>
+                                <option value="comm_ins">Commercial Insurance - Non-Trucking Business</option>
+                            </optgroup>
+                            <optgroup label="Motor Vehicle Insurance Templates">
+                                <option value="mva_ins">Motor Vehicle Accident Insurance</option>
+                            </optgroup>
+                            <optgroup label="Auto Insurance Templates">
+                                <option value="auto_ins">Auto Insurance</option>
+                            </optgroup>
+                        </select>
+                        <div class="help-text">Choose a template to start with pre-filled content, or start from scratch below</div>
+                    </div>
+                </div>
+
+                <!-- BASIC INFO -->
+                <div class="form-section">
+                    <h2 class="section-title">📄 Basic Information</h2>
+                    
+                    <div class="form-group">
+                        <label>Page Title <span class="label-help">(appears in browser tab)</span></label>
+                        <input type="text" id="pageTitle" value="TodayILearned - How GLP-1s Can Help You" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Color Theme</label>
+                        <div class="theme-preview">
+                            <div class="theme-option theme-default selected" data-theme="default">
+                                Default<br>Navy
+                            </div>
+                            <div class="theme-option theme-purple" data-theme="purple">
+                                Purple<br>Luxury
+                            </div>
+                            <div class="theme-option theme-green" data-theme="green">
+                                Green<br>Health
+                            </div>
+                            <div class="theme-option theme-orange" data-theme="orange">
+                                Orange<br>Energy
+                            </div>
+                            <div class="theme-option theme-pink" data-theme="pink">
+                                Pink<br>Beauty
+                            </div>
+                            <div class="theme-option theme-red" data-theme="red">
+                                Red<br>Urgent
+                            </div>
+                            <div class="theme-option theme-white" data-theme="white">
+                                White<br>Clean
+                            </div>
+                            <div class="theme-option theme-light" data-theme="light">
+                                Light<br>Soft
+                            </div>
+                        </div>
+                        <input type="hidden" id="theme" value="default">
+                    </div>
+                </div>
+
+                <!-- INTRO TEXT -->
+                <div class="form-section">
+                    <h2 class="section-title">📝 Opening Content</h2>
+                    
+                    <div class="form-group">
+                        <label>Opening Paragraph</label>
+                        <textarea id="introText">Managing health conditions like type 2 diabetes and obesity has been revolutionized by new strategies and treatments, including GLP-1 receptor agonists. These at-home solutions, often administered via injection or oral tablets, provide convenient and effective management, promoting better health and an improved quality of life.</textarea>
+                        <div class="help-text">First paragraph users see on the page</div>
+                    </div>
+
+                    <div class="form-group">
+                        <label>Ad Units Section Label</label>
+                        <input type="text" id="relatedSearchesLabel" value="Related searches">
+                        <div class="help-text">Label that appears above your first group of ad units</div>
+                    </div>
+                </div>
+
+                <!-- FIRST AD UNITS -->
+                <div class="form-section">
+                    <h2 class="section-title">🎯 First Ad Units Group</h2>
+                    <div id="adUnitsContainer"></div>
+                    <button type="button" class="btn btn-add" onclick="addAdUnit()">+ Add Another Ad Unit</button>
+                </div>
+
+                <!-- MIDDLE CONTENT -->
+                <div class="form-section">
+                    <h2 class="section-title">📄 Middle Content</h2>
+                    
+                    <div class="form-group">
+                        <label>Second Paragraph</label>
+                        <textarea id="secondIntroText">GLP-1 receptor agonists are a class of medications that mimic the action of the natural hormone GLP-1, playing a crucial role in regulating blood sugar levels and appetite.</textarea>
+                        <div class="help-text">Paragraph between first and second ad unit groups</div>
+                    </div>
+                </div>
+
+                <!-- SECOND AD UNITS -->
+                <div class="form-section">
+                    <h2 class="section-title">🎯 Second Ad Units Group</h2>
+                    <div id="secondAdUnitsContainer"></div>
+                    <button type="button" class="btn btn-add" onclick="addSecondAdUnit()">+ Add Another Ad Unit</button>
+                </div>
+
+                <!-- ACTIONS -->
+                <div class="actions">
+                    <button type="button" class="btn btn-primary" onclick="generateConfig()">🎨 Generate Config File</button>
+                    <button type="button" class="btn btn-secondary" onclick="resetForm()">🔄 Reset Form</button>
+                </div>
+            </form>
+
+            <!-- OUTPUT -->
+            <div id="output" style="display: none;">
+                <div class="output-section">
+                    <h3>✅ Your Configuration File</h3>
+                    
+                    <div class="form-group" style="margin-bottom: 20px;">
+                        <label style="color: #f8f8f2;">File Name <span class="label-help">(will automatically add -config.json)</span></label>
+                        <input type="text" id="fileName" value="my-landing-page" style="background: #f5f5f5; color: #1a1a1a; border: 2px solid #1a1a1a;">
+                        <div class="help-text" style="color: #999;">Preview: <strong id="fileNamePreview">my-landing-page-config.json</strong></div>
+                    </div>
+                    
+                    <div class="output-content" id="outputContent"></div>
+                    
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 15px; margin-top: 15px;">
+                        <button type="button" class="btn btn-success" onclick="downloadConfig()">💾 Download JSON File</button>
+                        <button type="button" class="btn btn-primary" onclick="copyToClipboard()">📋 Copy to Clipboard</button>
+                    </div>
+                    
+                    <div class="success-message" id="successMessage">✅ Copied to clipboard!</div>
+                    <div class="success-message" id="downloadMessage">✅ File downloaded successfully!</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        let adUnitCount = 0;
+        let secondAdUnitCount = 0;
+
+        // Initialize form with default ad units
+        function initializeForm() {
+            // Add 5 default first ad units
+            for (let i = 0; i < 5; i++) {
+                addAdUnit();
+            }
+            // Add 5 default second ad units
+            for (let i = 0; i < 5; i++) {
+                addSecondAdUnit();
+            }
+            
+            // Set default values for first group
+            document.getElementById('adUnit-0-title').value = 'GLP-1 Management';
+            document.getElementById('adUnit-0-url').value = 'https://example.com/glp1-management';
+            
+            document.getElementById('adUnit-1-title').value = 'Diabetes Management';
+            document.getElementById('adUnit-1-url').value = 'https://example.com/diabetes-management';
+            
+            document.getElementById('adUnit-2-title').value = 'Weight Management';
+            document.getElementById('adUnit-2-url').value = 'https://example.com/weight-management';
+            
+            document.getElementById('adUnit-3-title').value = 'Understanding GLP-1s';
+            document.getElementById('adUnit-3-url').value = 'https://example.com/understanding-glp1s';
+            
+            document.getElementById('adUnit-4-title').value = 'At-Home GLP-1 Solutions';
+            document.getElementById('adUnit-4-url').value = 'https://example.com/at-home-glp1-solutions';
+
+            // Set default values for second group
+            document.getElementById('secondAdUnit-0-title').value = 'Get GLP-1 Treatment';
+            document.getElementById('secondAdUnit-0-url').value = 'https://example.com/get-glp1-treatment';
+            
+            document.getElementById('secondAdUnit-1-title').value = 'GLP-1 Clinical Trials';
+            document.getElementById('secondAdUnit-1-url').value = 'https://example.com/glp1-clinical-trials';
+            
+            document.getElementById('secondAdUnit-2-title').value = 'GLP-1 Support';
+            document.getElementById('secondAdUnit-2-url').value = 'https://example.com/glp1-support';
+            
+            document.getElementById('secondAdUnit-3-title').value = 'GLP-1 Treatments Near Me';
+            document.getElementById('secondAdUnit-3-url').value = 'https://example.com/glp1-treatments-near-me';
+            
+            document.getElementById('secondAdUnit-4-title').value = 'Natural GLP-1 Boosters';
+            document.getElementById('secondAdUnit-4-url').value = 'https://example.com/natural-glp1-boosters';
+        }
+
+        // Theme selection
+        document.querySelectorAll('.theme-option').forEach(option => {
+            option.addEventListener('click', function() {
+                document.querySelectorAll('.theme-option').forEach(opt => opt.classList.remove('selected'));
+                this.classList.add('selected');
+                document.getElementById('theme').value = this.dataset.theme;
+            });
+        });
+
+        function addAdUnit() {
+            const container = document.getElementById('adUnitsContainer');
+            const id = adUnitCount++;
+            
+            const adUnitHTML = `
+                <div class="ad-unit" id="ad-unit-${id}">
+                    <div class="ad-unit-header">
+                        <span class="ad-unit-title">Ad Unit ${id + 1}</span>
+                        <button type="button" class="btn btn-danger" onclick="removeAdUnit(${id})">Remove</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Ad Title</label>
+                        <input type="text" id="adUnit-${id}-title" placeholder="e.g., GLP-1 Management">
+                    </div>
+                    <div class="form-group">
+                        <label>Click Destination URL</label>
+                        <input type="url" id="adUnit-${id}-url" placeholder="https://example.com/landing-page">
+                    </div>
+                    <div class="form-group">
+                        <label>Image URL <span class="label-help">(optional - leave empty for no image)</span></label>
+                        <input type="url" id="adUnit-${id}-image" placeholder="https://yourcdn.com/image.jpg">
+                    </div>
+                </div>
+            `;
+            
+            container.insertAdjacentHTML('beforeend', adUnitHTML);
+        }
+
+        function removeAdUnit(id) {
+            document.getElementById(`ad-unit-${id}`).remove();
+        }
+
+        function addSecondAdUnit() {
+            const container = document.getElementById('secondAdUnitsContainer');
+            const id = secondAdUnitCount++;
+            
+            const adUnitHTML = `
+                <div class="ad-unit" id="second-ad-unit-${id}">
+                    <div class="ad-unit-header">
+                        <span class="ad-unit-title">Ad Unit ${id + 1}</span>
+                        <button type="button" class="btn btn-danger" onclick="removeSecondAdUnit(${id})">Remove</button>
+                    </div>
+                    <div class="form-group">
+                        <label>Ad Title</label>
+                        <input type="text" id="secondAdUnit-${id}-title" placeholder="e.g., Get GLP-1 Treatment">
+                    </div>
+                    <div class="form-group">
+                        <label>Click Destination URL</label>
+                        <input type="url" id="secondAdUnit-${id}-url" placeholder="https://example.com/landing-page">
+                    </div>
+                    <div class="form-group">
+                        <label>Image URL <span class="label-help">(optional - leave empty for no image)</span></label>
+                        <input type="url" id="secondAdUnit-${id}-image" placeholder="https://yourcdn.com/image.jpg">
+                    </div>
+                </div>
+            `;
+            
+            container.insertAdjacentHTML('beforeend', adUnitHTML);
+        }
+
+        function removeSecondAdUnit(id) {
+            document.getElementById(`second-ad-unit-${id}`).remove();
+        }
+
+        function generateConfig() {
+            // Collect form data
+            const config = {
+                pageTitle: document.getElementById('pageTitle').value,
+                theme: document.getElementById('theme').value,
+                introText: document.getElementById('introText').value,
+                relatedSearchesLabel: document.getElementById('relatedSearchesLabel').value,
+                adUnits: [],
+                secondIntroText: document.getElementById('secondIntroText').value,
+                secondAdUnits: []
+            };
+
+            // Collect first ad units
+            for (let i = 0; i < adUnitCount; i++) {
+                const titleEl = document.getElementById(`adUnit-${i}-title`);
+                const urlEl = document.getElementById(`adUnit-${i}-url`);
+                const imageEl = document.getElementById(`adUnit-${i}-image`);
+                
+                if (titleEl && titleEl.value && urlEl && urlEl.value) {
+                    config.adUnits.push({
+                        title: titleEl.value,
+                        url: urlEl.value,
+                        backgroundImage: imageEl ? imageEl.value : ''
+                    });
+                }
+            }
+
+            // Collect second ad units
+            for (let i = 0; i < secondAdUnitCount; i++) {
+                const titleEl = document.getElementById(`secondAdUnit-${i}-title`);
+                const urlEl = document.getElementById(`secondAdUnit-${i}-url`);
+                const imageEl = document.getElementById(`secondAdUnit-${i}-image`);
+                
+                if (titleEl && titleEl.value && urlEl && urlEl.value) {
+                    config.secondAdUnits.push({
+                        title: titleEl.value,
+                        url: urlEl.value,
+                        backgroundImage: imageEl ? imageEl.value : ''
+                    });
+                }
+            }
+
+            // Display formatted JSON
+            const jsonOutput = JSON.stringify(config, null, 2);
+            document.getElementById('outputContent').textContent = jsonOutput;
+            document.getElementById('output').style.display = 'block';
+            
+            // Scroll to output
+            document.getElementById('output').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        function copyToClipboard() {
+            const content = document.getElementById('outputContent').textContent;
+            navigator.clipboard.writeText(content).then(() => {
+                const message = document.getElementById('successMessage');
+                message.style.display = 'block';
+                setTimeout(() => {
+                    message.style.display = 'none';
+                }, 3000);
+            });
+        }
+
+        function downloadConfig() {
+            const content = document.getElementById('outputContent').textContent;
+            let fileName = document.getElementById('fileName').value.trim();
+            
+            // Remove -config.json if user added it
+            fileName = fileName.replace(/-config\.json$/i, '').replace(/\.json$/i, '');
+            
+            // Add -config.json suffix
+            const fullFileName = `${fileName}-config.json`;
+            
+            // Create blob and download
+            const blob = new Blob([content], { type: 'application/json' });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = fullFileName;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+            
+            // Show success message
+            const message = document.getElementById('downloadMessage');
+            message.style.display = 'block';
+            setTimeout(() => {
+                message.style.display = 'none';
+            }, 3000);
+        }
+
+        // Update file name preview in real-time
+        document.addEventListener('DOMContentLoaded', function() {
+            const fileNameInput = document.getElementById('fileName');
+            const preview = document.getElementById('fileNamePreview');
+            
+            if (fileNameInput && preview) {
+                fileNameInput.addEventListener('input', function() {
+                    let fileName = this.value.trim() || 'my-landing-page';
+                    // Remove -config.json if user added it
+                    fileName = fileName.replace(/-config\.json$/i, '').replace(/\.json$/i, '');
+                    preview.textContent = `${fileName}-config.json`;
+                });
+            }
+        });
+
+        function resetForm() {
+            if (confirm('Are you sure you want to reset the form? All your changes will be lost.')) {
+                document.getElementById('configForm').reset();
+                document.getElementById('adUnitsContainer').innerHTML = '';
+                document.getElementById('secondAdUnitsContainer').innerHTML = '';
+                document.getElementById('output').style.display = 'none';
+                adUnitCount = 0;
+                secondAdUnitCount = 0;
+                initializeForm();
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        }
+
+        // Template loader function
+        async function loadTemplate() {
+            const templateName = document.getElementById('templateSelector').value;
+            
+            if (!templateName) {
+                return; // No template selected
+            }
+
+            try {
+                // Fetch the template JSON file
+                const response = await fetch(`../config-files/${templateName}-config.json`);
+                
+                if (!response.ok) {
+                    alert('❌ Could not load template.\n\nTo use templates locally:\n1. Start a local web server in the project folder\n2. Or upload both tools/ and config-files/ folders to your web server\n\nTemplates work automatically when hosted online!');
+                    return;
+                }
+                
+                const template = await response.json();
+                
+                // Populate basic info
+                document.getElementById('pageTitle').value = template.pageTitle || '';
+                document.getElementById('introText').value = template.introText || '';
+                document.getElementById('relatedSearchesLabel').value = template.relatedSearchesLabel || 'Related searches';
+                document.getElementById('secondIntroText').value = template.secondIntroText || '';
+                
+                // Set theme
+                if (template.theme) {
+                    document.getElementById('theme').value = template.theme;
+                    document.querySelectorAll('.theme-option').forEach(opt => opt.classList.remove('selected'));
+                    document.querySelector(`.theme-option[data-theme="${template.theme}"]`)?.classList.add('selected');
+                }
+                
+                // Clear existing ad units
+                document.getElementById('adUnitsContainer').innerHTML = '';
+                document.getElementById('secondAdUnitsContainer').innerHTML = '';
+                adUnitCount = 0;
+                secondAdUnitCount = 0;
+                
+                // Load first ad units
+                if (template.adUnits && template.adUnits.length > 0) {
+                    template.adUnits.forEach(adUnit => {
+                        addAdUnit();
+                        const id = adUnitCount - 1;
+                        document.getElementById(`adUnit-${id}-title`).value = adUnit.title || '';
+                        document.getElementById(`adUnit-${id}-url`).value = adUnit.url || '';
+                        document.getElementById(`adUnit-${id}-image`).value = adUnit.backgroundImage || '';
+                    });
+                }
+                
+                // Load second ad units
+                if (template.secondAdUnits && template.secondAdUnits.length > 0) {
+                    template.secondAdUnits.forEach(adUnit => {
+                        addSecondAdUnit();
+                        const id = secondAdUnitCount - 1;
+                        document.getElementById(`secondAdUnit-${id}-title`).value = adUnit.title || '';
+                        document.getElementById(`secondAdUnit-${id}-url`).value = adUnit.url || '';
+                        document.getElementById(`secondAdUnit-${id}-image`).value = adUnit.backgroundImage || '';
+                    });
+                }
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+                
+                // Show success message
+                alert(`✅ Template loaded: ${templateName}\n\nYou can now edit the content and generate your config file.`);
+                
+            } catch (error) {
+                console.error('Error loading template:', error);
+                alert('❌ Error loading template.\n\nThis feature requires a web server to work.\n\n✅ Solution: Upload to your hosting and it will work perfectly!\n\n(Local file:// protocol blocks loading templates for security)');
+            }
+        }
+
+        // Initialize on page load
+        window.addEventListener('DOMContentLoaded', initializeForm);
+    </script>
+</body>
+</html>
+

@@ -1,0 +1,86 @@
+{
+  "pageTitle": "TodayILearned - Managing Diabetes Effectively",
+  "theme": "green",
+  "introText": "Living with diabetes requires consistent management and informed decision-making. Modern treatment approaches and lifestyle modifications are making it easier than ever to maintain healthy blood sugar levels and live a full, active life.",
+  "relatedSearchesLabel": "Related searches",
+  "adUnits": [
+    {
+      "title": "Diabetes Treatment Options",
+      "url": "https://example.com/diabetes-treatment"
+    },
+    {
+      "title": "Blood Sugar Management",
+      "url": "https://example.com/blood-sugar-management"
+    },
+    {
+      "title": "Diabetes Diet Plans",
+      "url": "https://example.com/diabetes-diet"
+    },
+    {
+      "title": "Insulin Therapy Guide",
+      "url": "https://example.com/insulin-therapy"
+    },
+    {
+      "title": "Diabetes Support Groups",
+      "url": "https://example.com/diabetes-support"
+    }
+  ],
+  "secondIntroText": "Type 2 diabetes is a chronic condition that affects how your body processes blood sugar (glucose). With proper management, including medication, diet, and exercise, many people with diabetes live healthy, active lives. Understanding your condition is the first step toward better health.",
+  "sections": [
+    {
+      "title": "Understanding Diabetes Management",
+      "content": "Effective diabetes management involves monitoring blood sugar levels, taking medications as prescribed, following a healthy diet, staying physically active, and managing stress. Regular check-ups with your healthcare provider are essential for tracking your progress and adjusting your treatment plan as needed."
+    },
+    {
+      "title": "Key Strategies for Managing Diabetes",
+      "listItems": [
+        "<strong>Monitor Blood Sugar</strong>: Regular testing helps you understand how food, activity, and medications affect your levels.",
+        "<strong>Healthy Eating</strong>: Focus on balanced meals with controlled carbohydrate portions and plenty of fiber.",
+        "<strong>Regular Exercise</strong>: Physical activity helps lower blood sugar levels and improves insulin sensitivity.",
+        "<strong>Medication Adherence</strong>: Take prescribed medications consistently and as directed by your healthcare provider.",
+        "<strong>Stress Management</strong>: Stress can affect blood sugar levels, so finding healthy ways to cope is important."
+      ]
+    }
+  ],
+  "secondAdUnits": [
+    {
+      "title": "Find Diabetes Specialists",
+      "url": "https://example.com/find-specialists"
+    },
+    {
+      "title": "Diabetes Technology",
+      "url": "https://example.com/diabetes-technology"
+    },
+    {
+      "title": "Medicare Coverage Info",
+      "url": "https://example.com/medicare-coverage"
+    },
+    {
+      "title": "Free Diabetes Resources",
+      "url": "https://example.com/free-resources"
+    },
+    {
+      "title": "Emergency Care Guide",
+      "url": "https://example.com/emergency-care"
+    }
+  ],
+  "additionalSections": [
+    {
+      "title": "Medications for Diabetes",
+      "content": "Various medications are available to help manage diabetes, from oral medications like metformin to injectable medications like insulin and GLP-1 receptor agonists. Your healthcare provider will work with you to find the right combination of medications based on your individual needs, lifestyle, and health goals."
+    },
+    {
+      "title": "Preventing Complications",
+      "content": "Proper diabetes management helps prevent or delay complications such as heart disease, nerve damage, kidney disease, and vision problems. Regular screenings, maintaining target blood sugar levels, and adopting a healthy lifestyle are key to preventing long-term complications."
+    },
+    {
+      "title": "Living Well with Diabetes",
+      "content": "Many people with diabetes lead full, active lives. With modern treatments, continuous glucose monitors, and support systems, managing diabetes has become more convenient than ever. Connecting with others who have diabetes can provide valuable support and practical tips for daily management."
+    },
+    {
+      "title": "Take Control of Your Health",
+      "content": "Managing diabetes is a journey, and you don't have to do it alone. With the right tools, support, and information, you can take control of your health and live well with diabetes. Stay informed, work closely with your healthcare team, and make choices that support your overall well-being."
+    }
+  ]
+}
+

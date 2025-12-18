@@ -1,0 +1,15 @@
+# Deny direct access to config files from outside
+# But allow same-origin requests from your templates
+
+<Files "*.json">
+    Order Deny,Allow
+    Deny from all
+    # Allow requests from the same domain
+    SetEnvIf Referer "^https?://[^/]+/" local_referer
+    Allow from env=local_referer
+</Files>
+
+# Alternative: Simple deny all approach
+# Templates can still fetch via JavaScript (same-origin policy)
+# But direct URL access is blocked
+

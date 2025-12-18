@@ -1,0 +1,96 @@
+{
+  "pageTitle": "Prevent Type 2 Diabetes - Take Action Now",
+  "theme": "orange",
+  "introText": "Prediabetes affects 96 million American adults, but type 2 diabetes isn't inevitable. Research shows that lifestyle changes can reduce your risk of developing diabetes by up to 58%. Whether you've been diagnosed with prediabetes or want to prevent it, taking action now can protect your health for years to come.",
+  "relatedSearchesLabel": "Diabetes Prevention",
+  "adUnits": [
+    {
+      "title": "Prediabetes Test Online",
+      "url": "https://example.com/prediabetes-test",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Diabetes Prevention Program",
+      "url": "https://example.com/prevention-program",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Reverse Prediabetes",
+      "url": "https://example.com/reverse-prediabetes",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Diabetes Risk Assessment",
+      "url": "https://example.com/risk-assessment",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Find Prevention Program",
+      "url": "https://example.com/find-program",
+      "backgroundImage": ""
+    }
+  ],
+  "secondIntroText": "Prediabetes means your blood sugar levels are higher than normal but not yet high enough to be classified as type 2 diabetes. This is your body's warning signal and your opportunity to prevent diabetes from developing. The same strategies that prevent diabetes also improve overall health, energy, and well-being.",
+  "sections": [
+    {
+      "title": "Are You at Risk?",
+      "content": "Several factors increase diabetes risk: being overweight or obese, being physically inactive, having a family history of diabetes, being over age 45, or having had gestational diabetes. Certain ethnic groups including African Americans, Hispanic/Latino Americans, Native Americans, and Asian Americans face higher risk. If you have any risk factors, getting your blood sugar tested and taking preventive action is crucial."
+    },
+    {
+      "title": "Proven Prevention Strategies",
+      "listItems": [
+        "<strong>Lose 5-7% of body weight</strong>: Even modest weight loss dramatically reduces diabetes risk",
+        "<strong>Exercise 150 minutes weekly</strong>: Brisk walking, swimming, or cycling improves insulin sensitivity",
+        "<strong>Eat more fiber</strong>: Whole grains, vegetables, beans, and fruits help control blood sugar",
+        "<strong>Reduce processed foods</strong>: Cut back on refined carbs, sugary drinks, and fast food",
+        "<strong>Get quality sleep</strong>: Poor sleep affects hormones that control blood sugar and appetite"
+      ]
+    }
+  ],
+  "secondAdUnits": [
+    {
+      "title": "Weight Loss for Prevention",
+      "url": "https://example.com/weight-loss-prevention",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Prediabetes Meal Plan",
+      "url": "https://example.com/prediabetes-meal-plan",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Medication for Prevention",
+      "url": "https://example.com/prevention-medication",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Free Diabetes Screening",
+      "url": "https://example.com/free-screening",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Join Prevention Study",
+      "url": "https://example.com/prevention-study",
+      "backgroundImage": ""
+    }
+  ],
+  "additionalSections": [
+    {
+      "title": "The National Diabetes Prevention Program",
+      "content": "This CDC-recognized program has helped thousands prevent or delay type 2 diabetes. Led by trained lifestyle coaches, participants learn strategies for healthy eating, physical activity, and behavior change through year-long group classes. Studies show program participants reduce their risk of developing diabetes by 58% overall and by 71% for those over age 60. Many insurance plans, including Medicare, now cover the program."
+    },
+    {
+      "title": "Foods That Fight Diabetes Risk",
+      "content": "Fill your plate with non-starchy vegetables like leafy greens, broccoli, peppers, and tomatoes. Choose whole grains over refined grains - brown rice instead of white, whole wheat bread instead of white bread. Include lean proteins like fish, chicken, beans, and lentils. Healthy fats from nuts, avocados, and olive oil help control blood sugar. Limit red meat, processed meats, and foods with added sugars."
+    },
+    {
+      "title": "When Lifestyle Isn't Enough",
+      "content": "For some people at very high risk of diabetes, especially those with prediabetes plus other risk factors like very high blood sugar or obesity, medication may be recommended alongside lifestyle changes. Metformin, a safe diabetes medication, can reduce diabetes risk by 31% in high-risk individuals. Discuss with your healthcare provider whether medication might be appropriate for your prevention plan."
+    },
+    {
+      "title": "Start Preventing Diabetes Today",
+      "content": "The best time to prevent diabetes is now, before it develops. Small changes in your daily habits can make a dramatic difference in your future health. Get your blood sugar checked to know your baseline, connect with a diabetes prevention program in your area, and commit to lifestyle changes that will protect not just against diabetes, but also heart disease, certain cancers, and other chronic conditions. Your future self will thank you."
+    }
+  ]
+}
+

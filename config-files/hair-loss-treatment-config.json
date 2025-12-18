@@ -1,0 +1,96 @@
+{
+  "pageTitle": "Hair Loss Treatment Options - Find What Works for You",
+  "theme": "purple",
+  "introText": "Choosing the right hair loss treatment can feel overwhelming with so many options available. From FDA-approved medications to advanced procedures, understanding what works, how treatments compare, and what results to expect helps you make informed decisions. Whether you're just starting to thin or have significant loss, effective solutions exist for your situation.",
+  "relatedSearchesLabel": "Hair Treatment Options",
+  "adUnits": [
+    {
+      "title": "Compare Hair Treatments",
+      "url": "https://example.com/compare-treatments",
+      "backgroundImage": ""
+    },
+    {
+      "title": "FDA-Approved Solutions",
+      "url": "https://example.com/fda-approved",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Hair Loss Specialist",
+      "url": "https://example.com/specialist",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Treatment Cost Guide",
+      "url": "https://example.com/cost-guide",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Free Treatment Consultation",
+      "url": "https://example.com/free-consultation",
+      "backgroundImage": ""
+    }
+  ],
+  "secondIntroText": "Hair loss treatments fall into several categories: medications that block hair loss hormones, topical solutions that stimulate growth, procedures that use your body's healing factors, devices that energize follicles with light, and surgical options that relocate hair. Most people see best results combining treatments that work through different mechanisms.",
+  "sections": [
+    {
+      "title": "Medication-Based Treatments",
+      "content": "Finasteride (Propecia) is an oral prescription that blocks DHT, the hormone that shrinks follicles in genetic hair loss. It stops further loss in most users and regrows hair in about two-thirds. Minoxidil (Rogaine) is a topical solution applied directly to the scalp that widens blood vessels and extends the growth phase of hair. Available over-the-counter in 2% and 5% strengths, it works for both men and women. Both require ongoing use to maintain results."
+    },
+    {
+      "title": "Advanced Treatment Technologies",
+      "listItems": [
+        "<strong>PRP (Platelet-Rich Plasma)</strong>: Your blood is processed and injected into scalp, 3-4 sessions, $500-2000 per session",
+        "<strong>Microneedling with Growth Factors</strong>: Tiny needles create channels for better product absorption, monthly sessions",
+        "<strong>Low-Level Laser Therapy</strong>: FDA-cleared devices use red light to energize follicles, at-home use 3x weekly",
+        "<strong>Stem Cell Therapy</strong>: Experimental treatment showing promise in clinical trials",
+        "<strong>Exosome Therapy</strong>: Cutting-edge treatment using growth signals to reactivate follicles"
+      ]
+    }
+  ],
+  "secondAdUnits": [
+    {
+      "title": "Hair Transplant Surgery",
+      "url": "https://example.com/hair-transplant",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Non-Surgical Options",
+      "url": "https://example.com/non-surgical",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Natural Hair Remedies",
+      "url": "https://example.com/natural-remedies",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Treatment Success Stories",
+      "url": "https://example.com/success-stories",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Start Treatment Today",
+      "url": "https://example.com/start-treatment",
+      "backgroundImage": ""
+    }
+  ],
+  "additionalSections": [
+    {
+      "title": "Hair Transplant Procedures",
+      "content": "FUE (Follicular Unit Extraction) removes individual follicles from the back/sides of the head and transplants them to thinning areas. Recovery is faster with minimal scarring. FUT (Follicular Unit Transplantation) removes a strip of scalp, extracting follicles from it - allows more grafts in one session but leaves a linear scar. Modern techniques create natural-looking hairlines. Results are permanent since transplanted hair resists DHT. Costs range from $4,000-$15,000 depending on grafts needed."
+    },
+    {
+      "title": "Choosing the Right Treatment",
+      "content": "Consider your stage of hair loss - early thinning responds well to medications alone, while advanced loss may require procedures. Factor in your budget, both initial cost and ongoing maintenance. Think about convenience - daily pills, twice-daily topicals, monthly procedures, or one-time surgery. Account for realistic expectations and timeline - medications prevent further loss and regrow some hair over 6-12 months, while transplants show full results in 12-18 months."
+    },
+    {
+      "title": "Combining Treatments for Maximum Results",
+      "content": "Most hair loss specialists recommend a multi-pronged approach. Using finasteride to block DHT combined with minoxidil to stimulate growth provides better results than either alone. Adding low-level laser therapy or PRP can enhance outcomes further. Post-transplant, continuing medications protects non-transplanted hair from progressive loss. Supplements, specialized shampoos, and scalp treatments support overall hair health and create an optimal environment for growth."
+    },
+    {
+      "title": "Get Expert Treatment Guidance",
+      "content": "Hair loss treatment isn't one-size-fits-all - what works depends on your specific type of loss, stage of progression, age, gender, and goals. Board-certified dermatologists and hair restoration specialists can properly diagnose your condition, explain which treatments offer the best chance of success for your situation, and create a personalized treatment plan. Telemedicine makes expert consultations accessible from home. Don't wait - early treatment preserves more hair and offers better outcomes."
+    }
+  ]
+}
+

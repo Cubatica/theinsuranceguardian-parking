@@ -1,0 +1,96 @@
+{
+  "pageTitle": "Type 2 Diabetes Solutions - Better Control Today",
+  "theme": "green",
+  "introText": "Type 2 diabetes affects millions of Americans, but with modern treatment approaches, you can achieve excellent blood sugar control and live a full, active life. New medications, continuous glucose monitors, and personalized care plans make managing diabetes easier than ever. Take control of your health with proven solutions designed for today's lifestyle.",
+  "relatedSearchesLabel": "Type 2 Diabetes Resources",
+  "adUnits": [
+    {
+      "title": "Type 2 Diabetes Treatment",
+      "url": "https://example.com/type2-treatment",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Lower Blood Sugar Naturally",
+      "url": "https://example.com/lower-blood-sugar",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Diabetes Medication Guide",
+      "url": "https://example.com/medication-guide",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Find Diabetes Doctor",
+      "url": "https://example.com/find-doctor",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Diabetes Meal Plans",
+      "url": "https://example.com/meal-plans",
+      "backgroundImage": ""
+    }
+  ],
+  "secondIntroText": "Type 2 diabetes occurs when your body becomes resistant to insulin or doesn't produce enough insulin to maintain normal blood sugar levels. Unlike type 1 diabetes, type 2 develops gradually and is closely linked to lifestyle factors like weight, diet, and physical activity. The good news is that type 2 diabetes responds well to treatment, and many people successfully manage it through a combination of medication, diet, and exercise.",
+  "sections": [
+    {
+      "title": "Understanding Your Type 2 Diabetes",
+      "content": "When you have type 2 diabetes, glucose builds up in your bloodstream instead of being used by your cells for energy. Over time, high blood sugar can damage blood vessels, nerves, eyes, kidneys, and heart. However, maintaining blood sugar in a healthy range dramatically reduces these risks. Regular monitoring, appropriate medications, and lifestyle modifications form the foundation of effective diabetes management."
+    },
+    {
+      "title": "Key Numbers to Know",
+      "listItems": [
+        "<strong>Target A1C</strong>: Below 7% for most adults (measures average blood sugar over 3 months)",
+        "<strong>Fasting Blood Sugar</strong>: 80-130 mg/dL before meals",
+        "<strong>After-Meal Blood Sugar</strong>: Less than 180 mg/dL two hours after eating",
+        "<strong>Blood Pressure</strong>: Below 140/90 mm Hg (lower is better for diabetes patients)",
+        "<strong>Cholesterol (LDL)</strong>: Below 100 mg/dL to protect heart health"
+      ]
+    }
+  ],
+  "secondAdUnits": [
+    {
+      "title": "Continuous Glucose Monitors",
+      "url": "https://example.com/glucose-monitors",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Diabetes Reversal Program",
+      "url": "https://example.com/reversal-program",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Free Diabetes Education",
+      "url": "https://example.com/diabetes-education",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Diabetes Support Groups",
+      "url": "https://example.com/support-groups",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Insurance Coverage Help",
+      "url": "https://example.com/insurance-help",
+      "backgroundImage": ""
+    }
+  ],
+  "additionalSections": [
+    {
+      "title": "Modern Treatment Options",
+      "content": "Type 2 diabetes treatment has advanced significantly in recent years. Beyond traditional medications like metformin, newer drug classes including GLP-1 receptor agonists and SGLT-2 inhibitors offer powerful blood sugar control with added benefits like weight loss and heart protection. Continuous glucose monitors provide real-time insights without finger pricks, while insulin pumps and smart pens make insulin therapy more precise and convenient when needed."
+    },
+    {
+      "title": "Lifestyle Changes That Work",
+      "content": "Diet and exercise remain cornerstones of diabetes management. Losing just 5-10% of body weight can significantly improve blood sugar control and may even allow some people to reduce medications. Focus on eating balanced meals with plenty of vegetables, lean proteins, and whole grains while limiting refined carbohydrates and sugary foods. Aim for 150 minutes of moderate exercise weekly, such as brisk walking, swimming, or cycling."
+    },
+    {
+      "title": "Preventing Complications",
+      "content": "Regular check-ups are essential for catching problems early. Schedule annual eye exams to detect diabetic retinopathy, get foot exams to prevent ulcers and infections, and monitor kidney function through regular blood tests. Keep your vaccinations current, practice good dental hygiene, and report any new symptoms to your healthcare provider promptly. With proper management, you can prevent or delay diabetes complications."
+    },
+    {
+      "title": "Live Well with Diabetes",
+      "content": "A diabetes diagnosis doesn't mean giving up the things you enjoy. Millions of people with type 2 diabetes lead active, fulfilling lives by staying informed, following their treatment plans, and making health a priority. Connect with healthcare providers who specialize in diabetes care to create a personalized management plan that fits your lifestyle, preferences, and goals. Better control starts with taking that first step."
+    }
+  ]
+}
+

@@ -1,0 +1,96 @@
+{
+  "pageTitle": "Daily Diabetes Management - Simple Strategies That Work",
+  "theme": "default",
+  "introText": "Managing diabetes day-to-day doesn't have to be overwhelming. With the right tools, habits, and support, you can maintain healthy blood sugar levels while enjoying life. Modern technology like continuous glucose monitors, smartphone apps, and convenient medications make diabetes management easier and more effective than ever before.",
+  "relatedSearchesLabel": "Diabetes Management Tools",
+  "adUnits": [
+    {
+      "title": "Diabetes Management App",
+      "url": "https://example.com/diabetes-app",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Blood Sugar Tracking",
+      "url": "https://example.com/blood-sugar-tracking",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Diabetes-Friendly Recipes",
+      "url": "https://example.com/recipes",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Exercise for Diabetes",
+      "url": "https://example.com/exercise-guide",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Diabetes Supplies Delivered",
+      "url": "https://example.com/supplies-delivery",
+      "backgroundImage": ""
+    }
+  ],
+  "secondIntroText": "Successful diabetes management revolves around consistent daily habits. Monitoring blood sugar, taking medications as prescribed, eating balanced meals, staying active, and managing stress all contribute to better control. The key is finding a routine that works for your lifestyle and becomes second nature over time.",
+  "sections": [
+    {
+      "title": "Your Daily Diabetes Checklist",
+      "content": "Start each day with a morning blood sugar check to understand how your body responded overnight. Take your medications at the same time daily for consistent effects. Plan your meals in advance to avoid impulsive food choices that spike blood sugar. Fit in physical activity, even if just a 10-minute walk after meals. End the day by reviewing your numbers and noting any patterns in your logbook or app."
+    },
+    {
+      "title": "Smart Food Choices",
+      "listItems": [
+        "<strong>Breakfast</strong>: Choose protein and fiber over sugary cereals (eggs, Greek yogurt, oatmeal)",
+        "<strong>Lunch</strong>: Fill half your plate with non-starchy vegetables, add lean protein",
+        "<strong>Dinner</strong>: Control portions of carbs like rice, pasta, and potatoes",
+        "<strong>Snacks</strong>: Pick nuts, cheese, vegetables with hummus over chips and cookies",
+        "<strong>Drinks</strong>: Choose water, unsweetened tea, or coffee over regular soda and juice"
+      ]
+    }
+  ],
+  "secondAdUnits": [
+    {
+      "title": "Meal Delivery for Diabetics",
+      "url": "https://example.com/meal-delivery",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Diabetes Coaching Program",
+      "url": "https://example.com/coaching",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Stress Management for Diabetes",
+      "url": "https://example.com/stress-management",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Travel Tips for Diabetics",
+      "url": "https://example.com/travel-tips",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Emergency Diabetes Kit",
+      "url": "https://example.com/emergency-kit",
+      "backgroundImage": ""
+    }
+  ],
+  "additionalSections": [
+    {
+      "title": "Technology That Helps",
+      "content": "Continuous glucose monitors (CGMs) show your blood sugar in real-time on your smartphone, alerting you to highs and lows before they become problems. Diabetes management apps track your numbers, medications, meals, and activity in one place, spotting patterns that help you and your doctor fine-tune your treatment. Smart insulin pens remember when you took your last dose, preventing dangerous double-dosing."
+    },
+    {
+      "title": "Handling Challenges",
+      "content": "Everyone faces obstacles in diabetes management. Sick days require more frequent monitoring and adjustments to medications. Eating out means asking questions about preparation and making smart menu choices. Travel demands extra supplies and planning. Stress and lack of sleep can raise blood sugar. The key is having strategies ready for these situations so they don't derail your control."
+    },
+    {
+      "title": "Building Your Support Team",
+      "content": "You don't have to manage diabetes alone. Your healthcare team should include a primary care doctor or endocrinologist, diabetes educator, dietitian, and pharmacist. Family and friends can support your efforts by joining you in healthy eating and exercise. Online communities and local support groups connect you with others who understand the daily challenges of living with diabetes."
+    },
+    {
+      "title": "Make Diabetes Management Easier",
+      "content": "The right tools and support make all the difference in daily diabetes management. From continuous glucose monitors that eliminate finger pricks to medications that work with your schedule, modern solutions fit seamlessly into your life. Connect with diabetes specialists who can help you create a personalized management plan using the latest technology and strategies for better control with less effort."
+    }
+  ]
+}
+

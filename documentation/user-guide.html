@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Guide - SparkPage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            border: 3px solid #34495e;
+        }
+        
+        .header-label {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .header h1 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 1;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .nav {
+            background: white;
+            border: 2px solid #d1d5db;
+            padding: 30px;
+            margin-bottom: 30px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        .nav a {
+            font-family: 'Roboto Mono', monospace;
+            background: #f8f9fa;
+            color: #2c3e50;
+            padding: 12px 20px;
+            text-decoration: none;
+            border: 2px solid #d1d5db;
+            font-weight: 600;
+            font-size: 0.9em;
+            transition: all 0.2s;
+        }
+        
+        .nav a:hover {
+            background: #2c3e50;
+            color: white;
+            border-color: #2c3e50;
+        }
+        
+        .content {
+            background: white;
+            border: 2px solid #d1d5db;
+            padding: 50px;
+        }
+        
+        .section {
+            margin-bottom: 60px;
+            padding-bottom: 40px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+        
+        .section:last-child {
+            border-bottom: none;
+        }
+        
+        h2 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            border-left: 6px solid #ff6b6b;
+            padding-left: 20px;
+            color: #2c3e50;
+        }
+        
+        h3 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.4em;
+            margin: 30px 0 20px 0;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        p {
+            margin-bottom: 20px;
+            font-size: 1.05em;
+            line-height: 1.8;
+            color: #4b5563;
+        }
+        
+        ul, ol {
+            margin-left: 30px;
+            margin-bottom: 20px;
+        }
+        
+        li {
+            margin-bottom: 12px;
+            font-size: 1.05em;
+            line-height: 1.7;
+        }
+        
+        code {
+            font-family: 'Roboto Mono', monospace;
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 3px 8px;
+            font-size: 0.9em;
+        }
+        
+        .code-block {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 25px;
+            font-family: 'Roboto Mono', monospace;
+            margin: 25px 0;
+            border: 2px solid #334155;
+            overflow-x: auto;
+            font-size: 0.95em;
+            line-height: 1.6;
+        }
+        
+        .info {
+            background: #e3f2fd;
+            border: 2px solid #d1d5db;
+            border-left: 6px solid #2196f3;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .warning {
+            background: #fef3c7;
+            border: 2px solid #d1d5db;
+            border-left: 6px solid #ff6b6b;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .success {
+            background: #e8f5e9;
+            border: 2px solid #d1d5db;
+            border-left: 6px solid #4caf50;
+            padding: 25px;
+            margin: 25px 0;
+        }
+        
+        .step {
+            background: #f8f9fa;
+            border: 2px solid #d1d5db;
+            padding: 25px;
+            margin: 20px 0;
+            display: flex;
+            gap: 20px;
+            align-items: flex-start;
+        }
+        
+        .step-number {
+            font-family: 'Roboto Mono', monospace;
+            background: #2c3e50;
+            color: white;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.3em;
+            flex-shrink: 0;
+        }
+        
+        .example {
+            background: white;
+            border: 2px solid #d1d5db;
+            padding: 30px;
+            margin: 25px 0;
+        }
+        
+        .example-title {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 700;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            border: 2px solid #d1d5db;
+        }
+        
+        thead {
+            background: #2c3e50;
+            color: white;
+        }
+        
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border: 1px solid #d1d5db;
+        }
+        
+        tbody tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9em;
+            color: #6b7280;
+            margin-top: 60px;
+        }
+        
+        .footer strong {
+            color: #2c3e50;
+        }
+        
+        @media (max-width: 768px) {
+            .content {
+                padding: 30px 20px;
+            }
+            
+            .nav {
+                flex-direction: column;
+            }
+            
+            .nav a {
+                width: 100%;
+                text-align: center;
+            }
+            
+            h2 {
+                font-size: 1.6em;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-label">Documentation</div>
+            <h1>User Guide</h1>
+            <p>Everything you need to use SparkPage</p>
+        </div>
+        <div class="nav">
+            <a href="#quick-start">Quick Start</a>
+            <a href="#uploading">Upload Files</a>
+            <a href="#security">Security</a>
+            <a href="#file-names">File Names</a>
+            <a href="#themes">Color Themes</a>
+            <a href="#images">Adding Images</a>
+            <a href="#troubleshooting">Troubleshooting</a>
+        </div>
+
+        <div class="content">
+            <!-- QUICK START -->
+            <div class="section" id="quick-start">
+                <h2>Quick Start Guide</h2>
+                
+                <p>Get your parking page live in 5 minutes!</p>
+
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>Choose Your Template Files</strong><br>
+                        Pick one HTML file from <code>lps/</code> folder and one JSON file from <code>config-files/</code> folder
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>Upload to Your Server</strong><br>
+                        Upload both files to the same folder on your web server
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <div>
+                        <strong>Access Your Page</strong><br>
+                        Visit: <code>yoursite.com/folder/parking.html?config=template-name</code>
+                    </div>
+                </div>
+
+                <div class="success">
+                    <strong>✅ Done!</strong> Your parking page is now live and ready to drive traffic.
+                </div>
+            </div>
+
+            <!-- UPLOADING FILES -->
+            <div class="section" id="uploading">
+                <h2>Uploading Files to Your Server</h2>
+
+                <h3>What to Upload</h3>
+                <p>You need 2 files minimum:</p>
+                <ul>
+                    <li><strong>parking.html</strong> or <strong>parkingplus.html</strong> - The page template</li>
+                    <li><strong>Your config file</strong> - Example: <code>glp1-weight-loss-config.json</code></li>
+                </ul>
+
+                <h3>Where to Upload</h3>
+                <p>Upload both files to the <strong>same folder</strong> on your web server. You also need to upload the <code>config-files/</code> folder.</p>
+
+                <div class="example">
+                    <div class="example-title">Example Server Structure:</div>
+                    <p>Upload these files to your web server:</p>
+                    <ul>
+                        <li><code>parking.html</code> - Place in any folder</li>
+                        <li><code>config-files/</code> folder - Must be in the same folder as the HTML file</li>
+                        <li>Inside <code>config-files/</code>: All your JSON config files</li>
+                    </ul>
+                    <p><strong>Example:</strong> If you put <code>parking.html</code> at <code>/landing-pages/parking.html</code>, then put the config folder at <code>/landing-pages/config-files/</code></p>
+                </div>
+
+                <h3>File Permissions</h3>
+                <div class="warning">
+                    <strong>⚠️ Important:</strong> Set file permissions to <strong>644</strong> for files and <strong>755</strong> for folders so your web server can read them.
+                </div>
+                
+                <div class="warning">
+                    <h3>⚠️ Don't Upload Everything!</h3>
+                    <p>Only upload the files needed: <code>lps/</code> folder and <code>config-files/</code> folder. <strong>Do not upload</strong> the tools, documentation, or start-here files - these are for your local use only.</p>
+                </div>
+            </div>
+
+            <!-- SECURITY -->
+            <div class="section" id="security">
+                <h2>Security & Protection</h2>
+                
+                <h3>Protecting Your Config Files</h3>
+                <p>The <code>.htaccess</code> file in your config-files folder prevents direct access to your JSON files.</p>
+                
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <div>
+                        <strong>Include the .htaccess File</strong><br>
+                        Make sure the <code>.htaccess</code> file is uploaded inside your <code>config-files/</code> folder. This file blocks direct URL access while still allowing your templates to load the configs.
+                    </div>
+                </div>
+                
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <div>
+                        <strong>Test the Protection</strong><br>
+                        Try to access a config file directly: <code>https://yoursite.com/config-files/diabetes-config.json</code><br>
+                        You should see "403 Forbidden" - that's good! Your pages will still work normally.
+                    </div>
+                </div>
+                
+                <h3>Security Best Practices</h3>
+                <ul>
+                    <li><strong>Use non-obvious folder names</strong> - Instead of "landing-pages", use generic names like <code>resources</code>, <code>content</code>, or <code>info</code></li>
+                    <li><strong>Don't link to your pages from your main site</strong> - Traffic sources link directly to the landing pages</li>
+                    <li><strong>Rename template files (optional)</strong> - Change <code>parking.html</code> to <code>page.html</code> or <code>index.html</code> for extra security</li>
+                </ul>
+                
+                <div class="info">
+                    <strong>💡 Why This Matters:</strong> If people can access your config files, they can see your entire setup, destination URLs, and system structure. The .htaccess file keeps your configs private.
+                </div>
+            </div>
+
+            <!-- FILE NAMES -->
+            <div class="section" id="file-names">
+                <h2>Understanding File Names and URLs</h2>
+
+                <div class="info">
+                    <strong>ℹ️ This is important!</strong> The file name and URL parameter work together in a specific way.
+                </div>
+
+                <h3>How It Works</h3>
+                <p>All config files follow this naming pattern:</p>
+                <div class="code-block">[name]-config.json</div>
+
+                <p>When you access a page, you use just the <code>[name]</code> part in the URL:</p>
+                <div class="code-block">?config=[name]</div>
+
+                <h3>Real Examples</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>File Name on Server</th>
+                            <th>URL Parameter to Use</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>glp1-weight-loss-config.json</code></td>
+                            <td><code>?config=glp1-weight-loss</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>diabetes-type2-config.json</code></td>
+                            <td><code>?config=diabetes-type2</code></td>
+                        </tr>
+                        <tr>
+                            <td><code>hair-loss-men-config.json</code></td>
+                            <td><code>?config=hair-loss-men</code></td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <p><strong>Full URL Example:</strong></p>
+                <div class="code-block">https://yoursite.com/landing-pages/parking.html?config=glp1-weight-loss</div>
+            </div>
+
+            <!-- THEMES -->
+            <div class="section" id="themes">
+                <h2>Color Themes</h2>
+
+                <p>SparkPage includes 8 color themes you can use to match your brand or test different looks.</p>
+
+                <h3>Available Themes</h3>
+                <ul>
+                    <li><strong>default</strong> - Blue/cyan theme</li>
+                    <li><strong>purple</strong> - Purple gradient</li>
+                    <li><strong>green</strong> - Green/emerald theme</li>
+                    <li><strong>orange</strong> - Orange/amber theme</li>
+                    <li><strong>pink</strong> - Pink theme</li>
+                    <li><strong>red</strong> - Red theme</li>
+                    <li><strong>white</strong> - White/blue theme</li>
+                    <li><strong>light</strong> - Light gray/green theme</li>
+                </ul>
+
+                <h3>How to Use Themes</h3>
+                <p>Add <code>&theme=name</code> to your URL:</p>
+                <div class="code-block">parking.html?config=glp1-weight-loss&theme=purple</div>
+
+                <div class="info">
+                    <strong>💡 Pro Tip:</strong> Test different themes with your traffic to see which converts best!
+                </div>
+            </div>
+
+            <!-- IMAGES -->
+            <div class="section" id="images">
+                <h2>Adding Images to Ad Units</h2>
+
+                <p>The <code>parkingplus.html</code> template supports thumbnail images in ad units.</p>
+
+                <h3>How to Add Images</h3>
+                <p>In your JSON config file, add <code>"backgroundImage"</code> to any ad unit:</p>
+                <div class="code-block">{
+  "title": "Learn About GLP-1 Medications",
+  "url": "https://yoursite.com/glp1-info",
+  "backgroundImage": "https://yoursite.com/images/glp1-thumb.jpg"
+}</div>
+
+                <h3>Image Requirements</h3>
+                <ul>
+                    <li><strong>Dimensions:</strong> 270x180 pixels (or similar ratio)</li>
+                    <li><strong>Format:</strong> JPG, PNG, or WebP</li>
+                    <li><strong>Size:</strong> Keep under 100KB for fast loading</li>
+                    <li><strong>URL:</strong> Full https:// URL to the image</li>
+                </ul>
+
+                <h3>Where to Host Images</h3>
+                <ul>
+                    <li>Your own web server</li>
+                    <li>CDN like Cloudflare or CloudFront</li>
+                    <li>Image hosting service like Imgur or imgBB</li>
+                </ul>
+
+                <div class="warning">
+                    <strong>⚠️ Note:</strong> Images are optional. Ad units work perfectly fine without them!
+                </div>
+            </div>
+
+            <!-- TROUBLESHOOTING -->
+            <div class="section" id="troubleshooting">
+                <h2>Troubleshooting</h2>
+
+                <h3>Page Shows "Loading content..."</h3>
+                <ul>
+                    <li>Check that the config file name matches the URL parameter</li>
+                    <li>Verify the config file is in the <code>config-files/</code> folder</li>
+                    <li>Make sure file permissions are set to 644</li>
+                    <li>Check browser console (F12) for error messages</li>
+                </ul>
+
+                <h3>Config File Not Found</h3>
+                <ul>
+                    <li>Verify you uploaded the <code>config-files/</code> folder</li>
+                    <li>Check spelling of the config name in the URL</li>
+                    <li>Remember: Remove <code>-config</code> from the URL parameter</li>
+                </ul>
+
+                <h3>Images Not Showing</h3>
+                <ul>
+                    <li>Make sure you're using <code>parkingplus.html</code>, not <code>parking.html</code></li>
+                    <li>Verify the image URL is correct and accessible</li>
+                    <li>Check that the image URL starts with <code>https://</code></li>
+                    <li>Test the image URL directly in your browser</li>
+                </ul>
+
+                <h3>Wrong Theme Showing</h3>
+                <ul>
+                    <li>Check the <code>&theme=</code> parameter in your URL</li>
+                    <li>Verify the theme name is spelled correctly</li>
+                    <li>Clear browser cache and refresh the page</li>
+                </ul>
+                
+                <h3>Getting 403 Errors on Pages</h3>
+                <ul>
+                    <li>The .htaccess file might be too strict</li>
+                    <li>Try temporarily removing .htaccess to test</li>
+                    <li>Check server error logs</li>
+                    <li>Verify folder permissions are set to 755</li>
+                </ul>
+
+                <div class="info">
+                    <strong>💡 Still Having Issues?</strong> Open your browser console (F12) and look for error messages. They usually point directly to the problem!
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>SparkPage</strong> - Professional Marketing Tool</p>
+        <p style="margin-top: 10px;">© 2025 All Rights Reserved</p>
+    </div>
+</body>
+</html>
+

@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>START HERE - SparkPage</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;600;700&family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
+            background: #f8f9fa;
+            color: #2c3e50;
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .header {
+            background: #2c3e50;
+            color: white;
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            border: 3px solid #34495e;
+        }
+        
+        .header-label {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.75em;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #ff6b6b;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+        
+        .header h1 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+        
+        .header p {
+            font-size: 1.2em;
+            opacity: 1;
+            color: rgba(255, 255, 255, 0.95);
+        }
+        
+        .content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        
+        .intro-box {
+            background: white;
+            border: 2px solid #d1d5db;
+            padding: 50px;
+            margin-bottom: 40px;
+        }
+        
+        .intro-box h2 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2.2em;
+            margin-bottom: 30px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .intro-box p {
+            font-size: 1.15em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #4b5563;
+        }
+        
+        .intro-box strong {
+            color: #2c3e50;
+            font-weight: 600;
+        }
+
+        .info-box {
+            background: #fef3c7;
+            border: 2px solid #d1d5db;
+            border-left: 6px solid #ff6b6b;
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .info-box h3 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.5em;
+            margin-bottom: 25px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+
+        .info-box p {
+            font-size: 1.1em;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            color: #4b5563;
+        }
+
+        .info-box strong {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+
+        .info-box code {
+            background: #1e293b;
+            color: #e2e8f0;
+            padding: 2px 8px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9em;
+        }
+        
+        .steps-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            margin: 50px 0;
+        }
+        
+        .step-card {
+            background: white;
+            border: 2px solid #d1d5db;
+            padding: 40px 35px;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            transition: all 0.2s;
+            position: relative;
+        }
+        
+        .step-card:hover {
+            transform: translateY(-2px);
+            box-shadow: 4px 4px 0px #9ca3af;
+            border-color: #9ca3af;
+        }
+
+        .step-card.primary {
+            background: #2c3e50;
+            color: white;
+            border-color: #34495e;
+        }
+
+        .step-card.primary:hover {
+            background: #34495e;
+            box-shadow: 4px 4px 0px #2c3e50;
+        }
+        
+        .step-number {
+            font-family: 'Roboto Mono', monospace;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            background: #2c3e50;
+            color: white;
+            text-align: center;
+            line-height: 50px;
+            font-size: 1.8em;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .step-card.primary .step-number {
+            background: #ff6b6b;
+            color: white;
+        }
+        
+        .step-card h3 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .step-card p {
+            line-height: 1.7;
+            font-size: 1.05em;
+        }
+
+        .step-card.primary p {
+            opacity: 0.95;
+        }
+        
+        .quick-links {
+            background: white;
+            border: 2px solid #d1d5db;
+            padding: 50px;
+            margin-top: 50px;
+        }
+        
+        .quick-links h2 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 1.8em;
+            margin-bottom: 40px;
+            font-weight: 700;
+            color: #2c3e50;
+        }
+        
+        .link-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+        }
+        
+        .quick-link {
+            background: #f8f9fa;
+            border: 2px solid #d1d5db;
+            padding: 30px 25px;
+            text-align: center;
+            text-decoration: none;
+            color: #2c3e50;
+            transition: all 0.2s;
+            display: block;
+        }
+        
+        .quick-link:hover {
+            background: #2c3e50;
+            color: white;
+            transform: translateX(3px);
+            border-color: #2c3e50;
+        }
+        
+        .quick-link-icon {
+            font-size: 2.5em;
+            margin-bottom: 15px;
+        }
+        
+        .quick-link-title {
+            font-family: 'Roboto Mono', monospace;
+            font-weight: 600;
+            font-size: 1em;
+        }
+
+        .cta-box {
+            background: #2c3e50;
+            color: white;
+            border: 3px solid #34495e;
+            padding: 50px;
+            margin-top: 50px;
+            text-align: center;
+        }
+
+        .cta-box h2 {
+            font-family: 'Roboto Mono', monospace;
+            font-size: 2em;
+            margin-bottom: 30px;
+            font-weight: 700;
+        }
+
+        .cta-box p {
+            font-size: 1.15em;
+            line-height: 1.9;
+            margin-bottom: 15px;
+        }
+
+        .cta-box .note {
+            margin-top: 30px;
+            font-size: 1em;
+            opacity: 0.8;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 40px 20px;
+            font-family: 'Roboto Mono', monospace;
+            font-size: 0.9em;
+            color: #6b7280;
+        }
+
+        .footer strong {
+            color: #2c3e50;
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .intro-box, .info-box, .quick-links, .cta-box {
+                padding: 30px;
+            }
+
+            .steps-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="header-label">Start Here</div>
+            <h1>SparkPage</h1>
+            <p>Create Parking Pages & Content Landers in Minutes</p>
+        </div>
+
+        <div class="content">
+            <div class="intro-box">
+                <h2>Control Where Your Traffic Goes</h2>
+                <p>SparkPage creates <strong>parking pages and content landers</strong> with customizable ad units that look like search results. You control every destination link.</p>
+            </div>
+
+            <div class="info-box">
+                <h3>What Is SparkPage?</h3>
+                <p><strong>SparkPage creates parking pages and content landers</strong> - pages that look like informational articles but contain clickable ad units that YOU control.</p>
+                
+                <p><strong>Here's how it works:</strong> Each page has informational content about a topic (GLP-1s, diabetes, hair loss, etc.) with prominent "ad units" that look like search results. You control where each ad unit links to - your offers, affiliate links, landing pages, anywhere you want!</p>
+                
+                <p><strong>Perfect for:</strong> Parking domains, pre-landers, advertorials, review pages, or bridge pages. Drive traffic to the page, visitors click the ad units, you control where they go.</p>
+                
+                <p><strong>The best part?</strong> Change links, colors, or content by editing a simple text file. No coding, no designer needed. One template = unlimited pages.</p>
+            </div>
+
+            <div class="steps-grid">
+                <a href="lps/parking.html?config=glp1-weight-loss" class="step-card">
+                    <div class="step-number">1</div>
+                    <h3>See It In Action</h3>
+                    <p>Click here to see a live example. Notice the prominent ad units that look like search results - YOU control where each one links!</p>
+                </a>
+
+                <a href="documentation/user-guide.html" class="step-card">
+                    <div class="step-number">2</div>
+                    <h3>Read The Simple Guide</h3>
+                    <p>Step-by-step instructions written for marketers. Learn how to upload files and customize your pages.</p>
+                </a>
+
+                <a href="tools/config-generator.html" class="step-card primary">
+                    <div class="step-number">3</div>
+                    <h3>Create Your Own</h3>
+                    <p>Use our visual tool to create custom landing pages. Pick a template, edit the content, and download!</p>
+                </a>
+            </div>
+
+            <div class="quick-links">
+                <h2>Need Something Specific?</h2>
+                <div class="link-grid">
+                    <a href="documentation/user-guide.html" class="quick-link">
+                        <div class="quick-link-icon">📖</div>
+                        <div class="quick-link-title">Full User Guide</div>
+                    </a>
+                    
+                    <a href="tools/config-generator.html" class="quick-link">
+                        <div class="quick-link-icon">⚙️</div>
+                        <div class="quick-link-title">Config Generator</div>
+                    </a>
+                    
+                    <a href="config-files/" class="quick-link">
+                        <div class="quick-link-icon">📋</div>
+                        <div class="quick-link-title">View All Templates</div>
+                    </a>
+                </div>
+            </div>
+
+            <div class="cta-box">
+                <h2>Quickest Path to Success</h2>
+                <p><strong>Step 1:</strong> Click the "See It In Action" button above</p>
+                <p><strong>Step 2:</strong> Read the User Guide to learn how to upload</p>
+                <p><strong>Step 3:</strong> Upload the files and start driving traffic</p>
+                <p class="note">The whole process takes less than 10 minutes, even if you've never done this before.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <p><strong>SparkPage</strong> - Professional Marketing Tool</p>
+        <p style="margin-top: 10px;">© 2025 All Rights Reserved</p>
+    </div>
+</body>
+</html>

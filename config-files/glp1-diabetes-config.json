@@ -1,0 +1,96 @@
+{
+  "pageTitle": "GLP-1 for Type 2 Diabetes - Better Blood Sugar Control",
+  "theme": "default",
+  "introText": "Managing type 2 diabetes effectively requires comprehensive treatment approaches. GLP-1 receptor agonists have emerged as a breakthrough medication class that not only helps lower blood sugar levels but also supports weight loss and reduces cardiovascular risk. These once-daily or once-weekly injections work with your body's natural processes to achieve better diabetes control.",
+  "relatedSearchesLabel": "Diabetes Management Options",
+  "adUnits": [
+    {
+      "title": "GLP-1 for Diabetes Control",
+      "url": "https://example.com/glp1-diabetes",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Lower A1C with GLP-1",
+      "url": "https://example.com/lower-a1c",
+      "backgroundImage": ""
+    },
+    {
+      "title": "GLP-1 vs Insulin",
+      "url": "https://example.com/glp1-vs-insulin",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Find Diabetes Specialist",
+      "url": "https://example.com/diabetes-doctor",
+      "backgroundImage": ""
+    },
+    {
+      "title": "GLP-1 Patient Reviews",
+      "url": "https://example.com/patient-reviews",
+      "backgroundImage": ""
+    }
+  ],
+  "secondIntroText": "GLP-1 receptor agonists represent a significant advancement in type 2 diabetes treatment. Unlike traditional medications that simply lower blood sugar, GLP-1s address multiple aspects of the disease by enhancing insulin secretion when blood sugar is high, reducing glucagon release, and slowing digestion to prevent blood sugar spikes after meals.",
+  "sections": [
+    {
+      "title": "How GLP-1 Improves Diabetes Control",
+      "content": "GLP-1 medications work through your body's natural glucose-dependent insulin secretion pathway. When blood sugar levels rise after eating, GLP-1s stimulate the pancreas to release more insulin while simultaneously reducing glucagon, a hormone that raises blood sugar. This dual action helps maintain blood sugar in a healthy range without increasing the risk of dangerous low blood sugar episodes."
+    },
+    {
+      "title": "Benefits Beyond Blood Sugar Control",
+      "listItems": [
+        "<strong>A1C Reduction</strong>: Typically lowers A1C by 1-2 percentage points within 3-6 months",
+        "<strong>Weight Loss</strong>: Average weight loss of 5-10 pounds, helping address a major diabetes risk factor",
+        "<strong>Cardiovascular Protection</strong>: Proven to reduce risk of heart attack and stroke in diabetes patients",
+        "<strong>Blood Pressure</strong>: Modest reductions in blood pressure often observed",
+        "<strong>Liver Health</strong>: May improve fatty liver disease common in diabetes patients"
+      ]
+    }
+  ],
+  "secondAdUnits": [
+    {
+      "title": "Start GLP-1 Diabetes Treatment",
+      "url": "https://example.com/start-treatment",
+      "backgroundImage": ""
+    },
+    {
+      "title": "GLP-1 Insurance Coverage",
+      "url": "https://example.com/insurance-coverage",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Diabetes Meal Planning",
+      "url": "https://example.com/meal-planning",
+      "backgroundImage": ""
+    },
+    {
+      "title": "GLP-1 Injection Training",
+      "url": "https://example.com/injection-training",
+      "backgroundImage": ""
+    },
+    {
+      "title": "Free Diabetes Resources",
+      "url": "https://example.com/free-resources",
+      "backgroundImage": ""
+    }
+  ],
+  "additionalSections": [
+    {
+      "title": "Who Should Consider GLP-1 for Diabetes",
+      "content": "GLP-1 receptor agonists are typically recommended for adults with type 2 diabetes who haven't achieved adequate blood sugar control with metformin or other first-line treatments. They're particularly beneficial for patients who are overweight or obese, have cardiovascular disease, or are at high risk for heart problems. Your healthcare provider can determine if GLP-1 therapy is right for your diabetes management plan."
+    },
+    {
+      "title": "Real Results from Diabetes Patients",
+      "content": "Clinical studies consistently show impressive outcomes with GLP-1 treatment. Patients often see A1C levels drop from dangerous ranges (8-9%) to target ranges (below 7%) within months. Many report feeling better overall, with more stable energy levels throughout the day and fewer blood sugar highs and lows. The combination of improved glucose control and weight loss often allows patients to reduce other diabetes medications."
+    },
+    {
+      "title": "Access and Affordability",
+      "content": "Most insurance plans, including Medicare, cover GLP-1 medications for type 2 diabetes treatment. Manufacturer patient assistance programs can significantly reduce out-of-pocket costs for eligible patients. Additionally, the convenience of once-weekly formulations makes adherence easier compared to daily medications, improving long-term diabetes control outcomes."
+    },
+    {
+      "title": "Take Control of Your Diabetes Today",
+      "content": "Living well with diabetes is possible with the right treatment approach. GLP-1 therapy offers a proven path to better blood sugar control, reduced complications, and improved quality of life. Connect with a diabetes specialist to discuss whether GLP-1 medication could be the missing piece in your diabetes management plan and start your journey toward better health."
+    }
+  ]
+}
+
