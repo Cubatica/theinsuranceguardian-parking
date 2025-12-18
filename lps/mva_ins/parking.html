@@ -488,11 +488,15 @@
                 // Remove '-config' suffix if user included it
                 configName = configName.replace('-config', '');
                 
+                // Decode URL-encoded characters (handles underscores, spaces, etc.)
+                configName = decodeURIComponent(configName);
+                
                 const configFile = `../../config-files/${configName}-config.json`;
                 
                 // Fetch the JSON config
                 const response = await fetch(configFile);
                 if (!response.ok) {
+                    console.error(`Config file not found: ${configFile}. Attempted config name: ${configName}`);
                     throw new Error(`Config file not found: ${configFile}`);
                 }
                 config = await response.json();
