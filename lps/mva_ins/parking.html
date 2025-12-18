@@ -491,13 +491,33 @@
                 // Decode URL-encoded characters (handles underscores, spaces, etc.)
                 configName = decodeURIComponent(configName);
                 
-                const configFile = `../../config-files/${configName}-config.json`;
+                // Try multiple paths for different deployment scenarios
+                const configPaths = [
+                    `/config-files/${configName}-config.json`,      // Absolute path (if lps is root on Cloudflare Pages)
+                    `../../config-files/${configName}-config.json`,  // Standard relative path (if project root is served)
+                    `../config-files/${configName}-config.json`,    // Alternative relative path
+                    `https://theinsuranceguardian-parking.pages.dev/config-files/${configName}-config.json`  // Full URL fallback
+                ];
                 
-                // Fetch the JSON config
-                const response = await fetch(configFile);
-                if (!response.ok) {
-                    console.error(`Config file not found: ${configFile}. Attempted config name: ${configName}`);
-                    throw new Error(`Config file not found: ${configFile}`);
+                let configFile = null;
+                let response = null;
+                
+                // Try each path until one works
+                for (const path of configPaths) {
+                    try {
+                        response = await fetch(path);
+                        if (response.ok) {
+                            configFile = path;
+                            break;
+                        }
+                    } catch (e) {
+                        continue;
+                    }
+                }
+                
+                if (!response || !response.ok) {
+                    console.error(`Config file not found. Tried paths: ${configPaths.join(', ')}. Config name: ${configName}`);
+                    throw new Error(`Config file not found: ${configName}-config.json`);
                 }
                 config = await response.json();
                 
