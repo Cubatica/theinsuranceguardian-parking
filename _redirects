@@ -1,0 +1,9 @@
+# Cloudflare Pages redirects
+# This file helps Cloudflare Pages understand the routing
+
+# Redirect root to start page
+/ /start-here.html 200
+
+# Ensure config-files are accessible
+/config-files/* /config-files/:splat 200
+

@@ -493,9 +493,10 @@
                 
                 // Try multiple paths for different deployment scenarios
                 const configPaths = [
-                    `../../config-files/${configName}-config.json`,  // Standard relative path
-                    `/config-files/${configName}-config.json`,      // Absolute path (if lps is root)
-                    `../config-files/${configName}-config.json`    // Alternative relative path
+                    `/config-files/${configName}-config.json`,      // Absolute path (if lps is root on Cloudflare Pages)
+                    `../../config-files/${configName}-config.json`,  // Standard relative path (if project root is served)
+                    `../config-files/${configName}-config.json`,    // Alternative relative path
+                    `https://theinsuranceguardian-parking.pages.dev/config-files/${configName}-config.json`  // Full URL fallback
                 ];
                 
                 let configFile = null;
