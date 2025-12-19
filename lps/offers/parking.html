@@ -674,7 +674,6 @@
         }
         
         // Function to apply clickid to links (called after content is loaded)
-        var viewTracked = false; // Flag to prevent duplicate view tracking
         function applyClickIdToLinks() {
             function getCookie(name) {
                 var value = "; " + document.cookie;
@@ -694,14 +693,6 @@
             
             // If clickid exists, apply it to all clk links
             if (rtkClickID) {
-                // Send view tracking request (only once per page load)
-                if (!viewTracked) {
-                    var xhrTrack = new XMLHttpRequest();
-                    xhrTrack.open("GET", "https://clk.theinsuranceguardian.com/view?clickid=" + rtkClickID);
-                    xhrTrack.send();
-                    viewTracked = true;
-                }
-                
                 document.querySelectorAll('a').forEach(function (el) {
                     if (el.href.indexOf("clk.theinsuranceguardian.com/click") > -1) {
                         // Only modify if clickid is not already present
@@ -720,14 +711,6 @@
                     rtkClickID = getCookie('rtkclickid-store');
                     var currentCachebuster = Math.round(new Date().getTime() / 1000);
                     if (rtkClickID) {
-                        // Send view tracking request (only once per page load)
-                        if (!viewTracked) {
-                            var xhrTrack = new XMLHttpRequest();
-                            xhrTrack.open("GET", "https://clk.theinsuranceguardian.com/view?clickid=" + rtkClickID);
-                            xhrTrack.send();
-                            viewTracked = true;
-                        }
-                        
                         document.querySelectorAll('a').forEach(function (el) {
                             if (el.href.indexOf("clk.theinsuranceguardian.com/click") > -1) {
                                 if (el.href.indexOf('clickid=') === -1) {
