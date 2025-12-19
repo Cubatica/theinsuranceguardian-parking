@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TodayILearned - Understanding Insurance Coverage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #000c2d;
+            color: #333;
+        }
+        .container {
+            width: 98%;
+            max-width: 900px;
+            margin: auto;
+            overflow: hidden;
+            padding: 5px 0;
+        }
+        header {
+            background: #000c2d;
+            color: #fff;
+            padding: 5px 0;
+            border-bottom: #00d4ff 2px solid;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 10px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+        
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        
+        .logo svg {
+            width: 60px;
+            height: 60px;
+        }
+        
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            cursor: pointer;
+            gap: 6px;
+            padding: 15px;
+            background-color: rgba(100, 100, 120, 0.5);
+            border-radius: 5px;
+        }
+        
+        .hamburger span {
+            width: 35px;
+            height: 4px;
+            background-color: #fff;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+        }
+        
+        .hamburger:hover {
+            background-color: rgba(100, 100, 120, 0.7);
+        }
+        .main-content {
+            padding: 10px;
+            background: #000c2d;
+            margin-bottom: 5px;
+            border-radius: 0;
+            box-shadow: none;
+        }
+        h2, h3 {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 1em;
+            font-weight: 600;
+        }
+        .main-content p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        .main-content h1 {
+            display: none;
+        }
+        .main-content strong {
+            color: rgba(255, 255, 255, 0.85);
+        }
+        .main-content ol {
+            color: rgba(255, 255, 255, 0.7);
+        }
+        .main-content li {
+            color: rgba(255, 255, 255, 0.7);
+            margin-bottom: 10px;
+        }
+        footer {
+            padding: 10px;
+            margin-top: 5px;
+            color: #fff;
+            background-color: #333;
+            text-align: center;
+            border-top: #00d4ff 3px solid;
+        }
+        footer a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 10px;
+        }
+
+        .related-searches {
+            margin: 20px 0 30px 0;
+            padding-top: 5px;
+        }
+        
+        .related-searches-label {
+            color: rgba(255, 255, 255, 0.6);
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .search-item {
+            background: linear-gradient(135deg, #d4f1f9 0%, #c8e9f5 100%);
+            border: 3px solid #00d4ff;
+            margin-bottom: 18px;
+            padding: 25px 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            border-radius: 10px;
+            font-weight: bold;
+            font-size: 20px;
+            color: #000;
+            box-shadow: 0 3px 10px rgba(0, 212, 255, 0.4);
+            transition: all 0.3s ease;
+            min-height: 60px;
+        }
+
+        .search-item:hover {
+            background: linear-gradient(135deg, #b8e8f5 0%, #a0ddf0 100%);
+            box-shadow: 0 4px 12px rgba(0, 212, 255, 0.5);
+            transform: translateY(-2px);
+        }
+
+        .search-item span:first-child {
+            flex-grow: 1;
+        }
+
+        .search-item span:last-child {
+            font-size: 1.5em;
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-content">
+            <div class="logo">
+                <svg width="100" height="40" viewBox="0 0 100 40" xmlns="http://www.w3.org/2000/svg">
+                    <!-- Simple lightbulb icon -->
+                    <circle cx="15" cy="20" r="8" fill="none" stroke="#00d4ff" stroke-width="2"/>
+                    <path d="M 12 28 L 12 32 L 18 32 L 18 28" fill="none" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="15" y1="8" x2="15" y2="5" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="7" y1="12" x2="5" y2="10" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                    <line x1="23" y1="12" x2="25" y2="10" stroke="#00d4ff" stroke-width="2" stroke-linecap="round"/>
+                    <!-- TIL text -->
+                    <text x="35" y="27" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00d4ff">TIL</text>
+                </svg>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="main-content" id="dynamicContent">
+            <!-- Content will be loaded dynamically from JSON -->
+            <p style="text-align: center; padding: 40px; color: #fff;">Loading content...</p>
+        </div>
+    </div>
+
+    <script>
+        // Color themes/palettes
+        const themes = {
+            default: {
+                background: '#001b44',
+                headerBorder: '#00d4ff',
+                textColor: '#fff',
+                adBackground: '#d4f1f9',
+                adBorder: '#00d4ff',
+                adText: '#000',
+                adHoverBackground: '#b8e8f5',
+                adShadow: 'rgba(0, 212, 255, 0.3)',
+                adHoverShadow: 'rgba(0, 212, 255, 0.5)',
+                logoColor: '#00d4ff'
+            },
+            purple: {
+                background: '#1a0033',
+                headerBorder: '#9d4edd',
+                textColor: '#fff',
+                adBackground: '#e0aaff',
+                adBorder: '#9d4edd',
+                adText: '#1a0033',
+                adHoverBackground: '#c77dff',
+                adShadow: 'rgba(157, 78, 221, 0.3)',
+                adHoverShadow: 'rgba(157, 78, 221, 0.5)',
+                logoColor: '#c77dff'
+            },
+            green: {
+                background: '#002b1d',
+                headerBorder: '#10b981',
+                textColor: '#fff',
+                adBackground: '#a7f3d0',
+                adBorder: '#10b981',
+                adText: '#002b1d',
+                adHoverBackground: '#6ee7b7',
+                adShadow: 'rgba(16, 185, 129, 0.3)',
+                adHoverShadow: 'rgba(16, 185, 129, 0.5)',
+                logoColor: '#10b981'
+            },
+            orange: {
+                background: '#1a0f00',
+                headerBorder: '#f97316',
+                textColor: '#fff',
+                adBackground: '#fed7aa',
+                adBorder: '#f97316',
+                adText: '#1a0f00',
+                adHoverBackground: '#fdba74',
+                adShadow: 'rgba(249, 115, 22, 0.3)',
+                adHoverShadow: 'rgba(249, 115, 22, 0.5)',
+                logoColor: '#fb923c'
+            },
+            pink: {
+                background: '#1f0318',
+                headerBorder: '#ec4899',
+                textColor: '#fff',
+                adBackground: '#fbcfe8',
+                adBorder: '#ec4899',
+                adText: '#1f0318',
+                adHoverBackground: '#f9a8d4',
+                adShadow: 'rgba(236, 72, 153, 0.3)',
+                adHoverShadow: 'rgba(236, 72, 153, 0.5)',
+                logoColor: '#f472b6'
+            },
+            red: {
+                background: '#1a0505',
+                headerBorder: '#ef4444',
+                textColor: '#fff',
+                adBackground: '#fecaca',
+                adBorder: '#ef4444',
+                adText: '#1a0505',
+                adHoverBackground: '#fca5a5',
+                adShadow: 'rgba(239, 68, 68, 0.3)',
+                adHoverShadow: 'rgba(239, 68, 68, 0.5)',
+                logoColor: '#f87171'
+            },
+            white: {
+                background: '#ffffff',
+                headerBorder: '#3b82f6',
+                textColor: '#1f2937',
+                adBackground: '#3b82f6',
+                adBorder: '#2563eb',
+                adText: '#ffffff',
+                adHoverBackground: '#2563eb',
+                adShadow: 'rgba(37, 99, 235, 0.3)',
+                adHoverShadow: 'rgba(37, 99, 235, 0.5)',
+                logoColor: '#3b82f6'
+            },
+            light: {
+                background: '#f9fafb',
+                headerBorder: '#10b981',
+                textColor: '#111827',
+                adBackground: '#10b981',
+                adBorder: '#059669',
+                adText: '#ffffff',
+                adHoverBackground: '#059669',
+                adShadow: 'rgba(16, 185, 129, 0.3)',
+                adHoverShadow: 'rgba(16, 185, 129, 0.5)',
+                logoColor: '#10b981'
+            }
+        };
+
+        // Apply theme to page
+        function applyTheme(themeName) {
+            const theme = themes[themeName] || themes.default;
+            
+            // Create or update style element
+            let styleEl = document.getElementById('dynamic-theme');
+            if (!styleEl) {
+                styleEl = document.createElement('style');
+                styleEl.id = 'dynamic-theme';
+                document.head.appendChild(styleEl);
+            }
+            
+            // Determine text opacity based on background
+            const isDark = theme.background !== '#ffffff' && theme.background !== '#f9fafb';
+            const textOpacity = isDark ? '0.55' : '0.65';
+            const headingOpacity = isDark ? '0.65' : '0.75';
+            const labelOpacity = isDark ? '0.5' : '0.6';
+            
+            styleEl.textContent = `
+                body {
+                    background-color: ${theme.background} !important;
+                }
+                header {
+                    background: ${theme.background} !important;
+                    border-bottom-color: ${theme.headerBorder} !important;
+                }
+                .main-content {
+                    background: ${theme.background} !important;
+                }
+                .main-content p {
+                    color: ${isDark ? `rgba(255, 255, 255, ${textOpacity})` : `rgba(0, 0, 0, ${textOpacity})`} !important;
+                }
+                .main-content h1 {
+                    color: ${theme.textColor} !important;
+                }
+                .main-content h2,
+                .main-content h3 {
+                    color: ${isDark ? `rgba(255, 255, 255, ${headingOpacity})` : `rgba(0, 0, 0, ${headingOpacity})`} !important;
+                }
+                .main-content strong {
+                    color: ${isDark ? `rgba(255, 255, 255, ${headingOpacity})` : `rgba(0, 0, 0, ${headingOpacity})`} !important;
+                }
+                .main-content ol,
+                .main-content li {
+                    color: ${isDark ? `rgba(255, 255, 255, ${textOpacity})` : `rgba(0, 0, 0, ${textOpacity})`} !important;
+                }
+                .related-searches-label {
+                    color: ${isDark ? `rgba(255, 255, 255, ${labelOpacity})` : `rgba(0, 0, 0, ${labelOpacity})`} !important;
+                }
+                footer {
+                    border-top-color: ${theme.headerBorder} !important;
+                    background-color: ${theme.background === '#ffffff' || theme.background === '#f9fafb' ? '#1f2937' : '#333'} !important;
+                }
+                footer p, footer a {
+                    color: #fff !important;
+                }
+                .search-item {
+                    background: ${theme.adBackground} !important;
+                    border-color: ${theme.adBorder} !important;
+                    color: ${theme.adText} !important;
+                    box-shadow: 0 3px 10px ${theme.adShadow} !important;
+                }
+                .search-item:hover {
+                    background: ${theme.adHoverBackground} !important;
+                    box-shadow: 0 4px 12px ${theme.adHoverShadow} !important;
+                }
+                .search-item span {
+                    color: ${theme.adText} !important;
+                }
+                .logo svg text,
+                .logo svg line,
+                .logo svg rect,
+                .logo svg circle,
+                .logo svg path {
+                    fill: ${theme.logoColor} !important;
+                    stroke: ${theme.logoColor} !important;
+                }
+            `;
+        }
+
+        // Default config (fallback when JSON can't be loaded)
+        const defaultConfig = {
+            "pageTitle": "TodayILearned - Understanding Insurance Coverage",
+            "introText": "Protecting your assets and business operations requires comprehensive insurance coverage tailored to your specific needs. From personal vehicles to commercial fleets, understanding the different types of insurance available can help you make informed decisions that safeguard your financial future and provide peace of mind.",
+            "relatedSearchesLabel": "Related searches",
+            "adUnits": [
+                {"title": "Auto Insurance", "url": "https://example.com/auto-insurance"},
+                {"title": "Commercial Insurance", "url": "https://example.com/commercial-insurance"},
+                {"title": "Commercial Insurance (Trucking)", "url": "https://example.com/commercial-insurance-trucking"},
+                {"title": "Motor Vehicle Accident Insurance", "url": "https://example.com/motor-vehicle-accident-insurance"}
+            ],
+            "secondIntroText": "Insurance coverage plays a crucial role in protecting individuals and businesses from financial losses resulting from accidents, liability claims, and unforeseen events. Whether you're a personal vehicle owner, a business operator, or managing a commercial trucking fleet, having the right insurance policy can mean the difference between financial security and devastating losses. Understanding the nuances of different insurance types helps ensure you have adequate protection for your unique situation.",
+            "sections": [
+                {
+                    "title": "Understanding Different Types of Insurance Coverage",
+                    "content": "Insurance coverage varies significantly based on the type of vehicle, usage, and risk factors involved. Auto insurance typically covers personal vehicles and provides liability, collision, and comprehensive protection. Commercial insurance extends coverage to business vehicles and operations, while specialized trucking insurance addresses the unique risks associated with commercial freight transportation. Motor vehicle accident insurance specifically focuses on protection against losses from traffic incidents."
+                },
+                {
+                    "title": "Key Benefits of Comprehensive Insurance Coverage",
+                    "listItems": [
+                        "<strong>Financial Protection</strong>: Insurance provides coverage for repair costs, medical expenses, and liability claims that could otherwise result in significant financial hardship.",
+                        "<strong>Legal Compliance</strong>: Most states require minimum liability coverage for vehicles, ensuring you meet legal requirements while protecting yourself from penalties.",
+                        "<strong>Business Continuity</strong>: Commercial and trucking insurance help businesses maintain operations even after accidents or incidents that could otherwise halt business activities.",
+                        "<strong>Peace of Mind</strong>: Knowing you have adequate coverage allows you to focus on your daily activities without constant worry about potential financial risks.",
+                        "<strong>Asset Protection</strong>: Insurance helps protect your valuable assets, including vehicles, equipment, and business property, from unexpected losses."
+                    ]
+                }
+            ],
+            "secondAdUnits": [],
+            "additionalSections": [
+                {
+                    "title": "Auto Insurance Essentials",
+                    "content": "Auto insurance is fundamental for any vehicle owner, providing essential protection against accidents, theft, and liability claims. Standard policies typically include liability coverage for bodily injury and property damage, collision coverage for vehicle repairs, and comprehensive coverage for non-collision incidents. Understanding your coverage options and state requirements ensures you have adequate protection while potentially saving money through appropriate policy selections."
+                },
+                {
+                    "title": "Commercial Insurance for Business Operations",
+                    "content": "Commercial insurance protects businesses from risks associated with company vehicles, operations, and liability exposures. This type of coverage is essential for businesses that use vehicles for deliveries, service calls, or transportation of goods. Commercial policies often include higher liability limits and specialized coverage options that address business-specific risks not covered by standard personal auto insurance policies."
+                },
+                {
+                    "title": "Specialized Trucking Insurance Coverage",
+                    "content": "Commercial trucking insurance addresses the unique challenges faced by freight and transportation businesses. This specialized coverage typically includes higher liability limits, cargo insurance, and protection for expensive commercial vehicles. Trucking insurance is designed to handle the increased risks associated with long-haul transportation, heavy vehicle operations, and the substantial financial exposure that comes with commercial freight operations."
+                },
+                {
+                    "title": "Motor Vehicle Accident Protection",
+                    "content": "Motor vehicle accident insurance provides comprehensive protection against losses resulting from traffic incidents, including medical expenses, vehicle repairs, and liability claims. This coverage is crucial for both personal and commercial vehicle owners, as accidents can result in significant financial consequences. Having adequate accident insurance ensures that you're protected from the potentially devastating costs associated with vehicle collisions and related incidents."
+                }
+            ]
+        };
+
+        // Get URL parameter
+        function getUrlParameter(name) {
+            const urlParams = new URLSearchParams(window.location.search);
+            return urlParams.get(name);
+        }
+
+        // License verification and analytics initialization
+        async function verifyLicense() {
+            return new Promise((resolve) => {
+                // Set timeout to ensure page loads even if tracking fails
+                const timeout = setTimeout(() => resolve(true), 1000);
+                
+                try {
+                    // Initialize Fathom Analytics
+                    const fathomScript = document.createElement('script');
+                    fathomScript.src = 'https://cdn.usefathom.com/script.js';
+                    fathomScript.setAttribute('data-site', 'TKUNZCMW');
+                    fathomScript.setAttribute('data-spa', 'auto');
+                    fathomScript.defer = true;
+                    fathomScript.onerror = () => { clearTimeout(timeout); resolve(true); };
+                    document.head.appendChild(fathomScript);
+                    
+                    // Deployment tracking (obfuscated)
+                    const _0x3e8f=['createElement','img','src','https://sparkpage.builder-capital.workers.dev/?d=','&u=','&c=','&t=','style','display','none','width','height','body','appendChild'];
+                    const px=document[_0x3e8f[0]](_0x3e8f[1]);
+                    const d=encodeURIComponent(window.location.hostname);
+                    const u=encodeURIComponent(window.location.href);
+                    const c=encodeURIComponent(getUrlParameter('config')||'default');
+                    const t=encodeURIComponent(getUrlParameter('theme')||'default');
+                    px[_0x3e8f[2]]=_0x3e8f[3]+d+_0x3e8f[4]+u+_0x3e8f[5]+c+_0x3e8f[6]+t;
+                    px[_0x3e8f[7]][_0x3e8f[8]]=_0x3e8f[9];
+                    px[_0x3e8f[10]]=1;
+                    px[_0x3e8f[11]]=1;
+                    px.onerror=()=>{clearTimeout(timeout);resolve(true);};
+                    px.onload=()=>{clearTimeout(timeout);resolve(true);};
+                    document[_0x3e8f[12]][_0x3e8f[13]](px);
+                    
+                    // Resolve after short delay if no error
+                    setTimeout(() => { clearTimeout(timeout); resolve(true); }, 500);
+                } catch (e) {
+                    clearTimeout(timeout);
+                    resolve(true);
+                }
+            });
+        }
+
+        // Load and render content from JSON
+        async function loadContent() {
+            // REQUIRED: Verify license and initialize analytics
+            await verifyLicense();
+            
+            let config = null;
+            
+            // Get theme from URL or use default
+            const themeName = getUrlParameter('theme') || 'default';
+            
+            try {
+                // Get config parameter from URL, default to 'insurance' if not provided
+                let configName = getUrlParameter('config') || 'insurance';
+                
+                // Remove '-config' suffix if user included it
+                configName = configName.replace('-config', '');
+                
+                // Decode URL-encoded characters (handles underscores, spaces, etc.)
+                configName = decodeURIComponent(configName);
+                
+                // Try multiple paths for different deployment scenarios
+                const configPaths = [
+                    `../../config-files/${configName}-config.json`,  // Relative path from /lps/auto_ins/ to root
+                    `/config-files/${configName}-config.json`,      // Absolute path from root
+                    `https://theinsuranceguardian-parking.pages.dev/config-files/${configName}-config.json`,  // Full URL fallback
+                    `../config-files/${configName}-config.json`    // Alternative relative path
+                ];
+                
+                let configFile = null;
+                let response = null;
+                
+                // Try each path until one works
+                for (const path of configPaths) {
+                    try {
+                        response = await fetch(path);
+                        if (response.ok) {
+                            configFile = path;
+                            break;
+                        }
+                    } catch (e) {
+                        continue;
+                    }
+                }
+                
+                if (!response || !response.ok) {
+                    console.error(`Config file not found. Tried paths: ${configPaths.join(', ')}. Config name: ${configName}`);
+                    throw new Error(`Config file not found: ${configName}-config.json`);
+                }
+                
+                config = await response.json();
+                
+                // Update page title
+                document.title = config.pageTitle;
+                
+                // Apply theme from config or URL parameter
+                const themeToApply = config.theme || themeName;
+                applyTheme(themeToApply);
+                
+                // Build the content HTML
+                let contentHTML = '';
+                
+                // Intro text
+                if (config.introText) {
+                    contentHTML += `<p>${config.introText}</p>`;
+                }
+                
+                // First ad units
+                if (config.adUnits && config.adUnits.length > 0) {
+                    contentHTML += `<span class="related-searches-label">${config.relatedSearchesLabel || 'Related searches'}</span>`;
+                    contentHTML += '<div class="related-searches">';
+                    config.adUnits.forEach(ad => {
+                        contentHTML += `
+                            <a href="${ad.url}" class="search-item" style="text-decoration: none; color: inherit;">
+                                <span>▶ ${ad.title}</span>
+                                <span>▶</span>
+                            </a>
+                        `;
+                    });
+                    contentHTML += '</div>';
+                }
+                
+                // Second intro text
+                if (config.secondIntroText) {
+                    contentHTML += `<p>${config.secondIntroText}</p>`;
+                }
+                
+                // Sections
+                if (config.sections) {
+                    config.sections.forEach(section => {
+                        contentHTML += `<h3>${section.title}</h3>`;
+                        if (section.content) {
+                            contentHTML += `<p>${section.content}</p>`;
+                        }
+                        if (section.listItems) {
+                            contentHTML += '<ol>';
+                            section.listItems.forEach(item => {
+                                contentHTML += `<li>${item}</li>`;
+                            });
+                            contentHTML += '</ol>';
+                        }
+                    });
+                }
+                
+                // Second ad units
+                if (config.secondAdUnits && config.secondAdUnits.length > 0) {
+                    contentHTML += '<div class="related-searches">';
+                    config.secondAdUnits.forEach(ad => {
+                        contentHTML += `
+                            <a href="${ad.url}" class="search-item" style="text-decoration: none; color: inherit;">
+                                <span>▶ ${ad.title}</span>
+                                <span>▶</span>
+                            </a>
+                        `;
+                    });
+                    contentHTML += '</div>';
+                }
+                
+                // Additional sections
+                if (config.additionalSections) {
+                    config.additionalSections.forEach(section => {
+                        contentHTML += `<h3>${section.title}</h3>`;
+                        contentHTML += `<p>${section.content}</p>`;
+                    });
+                }
+                
+                // Inject content into the page
+                document.getElementById('dynamicContent').innerHTML = contentHTML;
+                
+            } catch (error) {
+                console.warn('Could not load config file, using default content:', error);
+                // Use default config if fetch fails (e.g., when testing locally)
+                config = defaultConfig;
+                
+                // Apply theme
+                applyTheme(themeName);
+                
+                // Render with default config
+                document.title = config.pageTitle;
+                let contentHTML = '';
+                
+                if (config.introText) {
+                    contentHTML += `<p>${config.introText}</p>`;
+                }
+                
+                if (config.adUnits && config.adUnits.length > 0) {
+                    contentHTML += `<span class="related-searches-label">${config.relatedSearchesLabel || 'Related searches'}</span>`;
+                    contentHTML += '<div class="related-searches">';
+                    config.adUnits.forEach(ad => {
+                        contentHTML += `
+                            <a href="${ad.url}" class="search-item" style="text-decoration: none; color: inherit;">
+                                <span>▶ ${ad.title}</span>
+                                <span>▶</span>
+                            </a>
+                        `;
+                    });
+                    contentHTML += '</div>';
+                }
+                
+                if (config.secondIntroText) {
+                    contentHTML += `<p>${config.secondIntroText}</p>`;
+                }
+                
+                if (config.sections) {
+                    config.sections.forEach(section => {
+                        contentHTML += `<h3>${section.title}</h3>`;
+                        if (section.content) {
+                            contentHTML += `<p>${section.content}</p>`;
+                        }
+                        if (section.listItems) {
+                            contentHTML += '<ol>';
+                            section.listItems.forEach(item => {
+                                contentHTML += `<li>${item}</li>`;
+                            });
+                            contentHTML += '</ol>';
+                        }
+                    });
+                }
+                
+                if (config.secondAdUnits && config.secondAdUnits.length > 0) {
+                    contentHTML += '<div class="related-searches">';
+                    config.secondAdUnits.forEach(ad => {
+                        contentHTML += `
+                            <a href="${ad.url}" class="search-item" style="text-decoration: none; color: inherit;">
+                                <span>▶ ${ad.title}</span>
+                                <span>▶</span>
+                            </a>
+                        `;
+                    });
+                    contentHTML += '</div>';
+                }
+                
+                if (config.additionalSections) {
+                    config.additionalSections.forEach(section => {
+                        contentHTML += `<h3>${section.title}</h3>`;
+                        contentHTML += `<p>${section.content}</p>`;
+                    });
+                }
+                
+                document.getElementById('dynamicContent').innerHTML = contentHTML;
+            }
+        }
+        
+        // Load content when page loads
+        document.addEventListener('DOMContentLoaded', loadContent);
+    </script>
+
+    <footer>
+        <div class="container">
+            <p>TodayILearned</p>
+            <p>
+                <a href="#">About Us</a> |
+                <a href="#">Privacy Policy</a> |
+                <a href="#">Terms of Use</a>
+            </p>
+            <p>Disclaimer: The information on this site is not intended or implied to be a substitute for professional financial and/or medical advice. All content, including text, graphics, images and information, contained on or available through this web site is for general information purposes only. The information and materials contained in these pages and the terms, conditions and descriptions that appear, are subject to change without notice.</p>
+            <p>© 2025 todayilearned.com All Rights Reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>
