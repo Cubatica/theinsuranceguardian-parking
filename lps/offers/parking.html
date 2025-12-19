@@ -687,43 +687,40 @@
                 return str.replace(/\/$/, "");
             }
             
+            function applyClickId(clickid, cachebuster) {
+                document.querySelectorAll('a').forEach(function (el) {
+                    if (el.href && el.href.indexOf("clk.theinsuranceguardian.com/click") > -1) {
+                        // Only modify if clickid is not already present
+                        if (el.href.indexOf('clickid=') === -1) {
+                            var baseUrl = stripTrailingSlash(el.href.split('?')[0]);
+                            el.href = baseUrl + "?clickid=" + clickid + "&rtkck=" + cachebuster;
+                        }
+                    }
+                });
+            }
+            
             // Get clickid from cookie (set by RedTrack script)
             var rtkClickID = getCookie('rtkclickid-store');
             var cachebuster = Math.round(new Date().getTime() / 1000);
             
             // If clickid exists, apply it to all clk links
             if (rtkClickID) {
-                document.querySelectorAll('a').forEach(function (el) {
-                    if (el.href.indexOf("clk.theinsuranceguardian.com/click") > -1) {
-                        // Only modify if clickid is not already present
-                        if (el.href.indexOf('clickid=') === -1) {
-                            if (el.href.indexOf('?') > -1) {
-                                el.href = stripTrailingSlash(el.href) + "&clickid=" + rtkClickID + "&rtkck=" + cachebuster;
-                            } else {
-                                el.href = stripTrailingSlash(el.href) + "?clickid=" + rtkClickID + "&rtkck=" + cachebuster;
-                            }
-                        }
-                    }
-                });
+                applyClickId(rtkClickID, cachebuster);
             } else {
-                // If clickid not in cookie yet, wait a bit and try again
-                setTimeout(function() {
+                // If clickid not in cookie yet, retry multiple times
+                var retryCount = 0;
+                var maxRetries = 10;
+                var retryInterval = setInterval(function() {
+                    retryCount++;
                     rtkClickID = getCookie('rtkclickid-store');
                     var currentCachebuster = Math.round(new Date().getTime() / 1000);
                     if (rtkClickID) {
-                        document.querySelectorAll('a').forEach(function (el) {
-                            if (el.href.indexOf("clk.theinsuranceguardian.com/click") > -1) {
-                                if (el.href.indexOf('clickid=') === -1) {
-                                    if (el.href.indexOf('?') > -1) {
-                                        el.href = stripTrailingSlash(el.href) + "&clickid=" + rtkClickID + "&rtkck=" + currentCachebuster;
-                                    } else {
-                                        el.href = stripTrailingSlash(el.href) + "?clickid=" + rtkClickID + "&rtkck=" + currentCachebuster;
-                                    }
-                                }
-                            }
-                        });
+                        applyClickId(rtkClickID, currentCachebuster);
+                        clearInterval(retryInterval);
+                    } else if (retryCount >= maxRetries) {
+                        clearInterval(retryInterval);
                     }
-                }, 100);
+                }, 200);
             }
         }
         
